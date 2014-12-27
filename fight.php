@@ -28,7 +28,7 @@ $ds = new DBObjectSaver(array(
  * which you will see three examples of below.
  *
  */
-
+//-------------------------------------------------------------------
 /**
  * Set up tracking of important variables
  *
@@ -44,18 +44,24 @@ $ds = new DBObjectSaver(array(
 //if we did not load any monsters from the DB
 if (!count($ds->monsters)) {
   //create new monster
-  $southern_dragon = New Southern_dragon("Southern Dragon");
-
+  $south_dragon = New South_Dragon("South Dragon");
+  $north_dragon = New North_Dragon("North Dragon");
+  // $necromancer = New Necromancer("Necromancer");
+  // $dark_knight = New Dark_Knight("Dark Knight");
+  // $owl_eye = New Owl_Eye("Owl Eye");
+  // $vampir = New Vampir("Vampir");
   //create new weapon for monster
-  // $southern_dragons_weapon = New Weapon($southern_dragon);
+  // $South_Dragons_weapon = New Weapon($south_dragon);
 
   //start tracking monster instance
-  $ds->monsters[] = $southern_dragon;
+  $ds->monsters[] = $south_dragon;
+  $ds->monsters[] = $north_dragon;
 }
 //elseif we did load any monsters from the DB
 else {
-  //store a reference to $ds->monsters[0] in the variable $southern_dragon
-  $southern_dragon = &$ds->monsters[0];
+  //store a reference to $ds->monsters[0] in the variable $south_dragon
+  $south_dragon = &$ds->monsters[0];
+  $north_dragon = &$ds->monsters[1];
 }
 
 //Tracking of a hero
@@ -108,7 +114,7 @@ else {
 }
 
 //End of tracking setup...
-
+//-------------------------------------------------------------------
 
 
 
@@ -125,15 +131,15 @@ if (!$knight->has_potions_left()) {
   $options["hero_potion"] = false;
 }
 
-//if southern_dragon has no monster strikes left, 
+//if south_dragon has no monster strikes left, 
 //remove that option
-if (!$southern_dragon->can_strike()) {
+if (!$south_dragon->can_strike()) {
   $options["monster_attack"] = false;
 }
 
 
 
-//southern_dragons version of healthCheck
+//South_Dragons version of healthCheck
 //that can be used on a single character only
 function healthCheck($character){
   //all echoes have been removed to make this PHP file silent
@@ -150,10 +156,10 @@ function healthCheck($character){
 //before this specific part of the story happens,
 //check if we recieved any options
 if (isset($_REQUEST["selectedOption"])) {
-  //was southern_dragon told to use monster strike?
+  //was south_dragon told to use monster strike?
   if ($_REQUEST["selectedOption"] == "monster_attack") {
     //THEN STRIKE THEM HEROES DOWN!
-    $southern_dragon->monster_strike = true;
+    $south_dragon->monster_strike = true;
   }
   //was knight told to use a potion?
   elseif ($_REQUEST["selectedOption"] == "hero_potion") {
@@ -166,10 +172,10 @@ if (isset($_REQUEST["selectedOption"])) {
 //all functions and methods called directly below return strings
 //add new parts of the story onto the $story array()
 //ps: $story is a reference to $ds->story
-$story[] = $southern_dragon->attack($knight);
+$story[] = $south_dragon->attack($knight);
 $story[] = healthCheck($knight);
-$story[] = $knight->attack($southern_dragon);
-$story[] = healthCheck($knight);
+$story[] = $knight->attack($south_dragon);
+$story[] = healthCheck($south_dragon);
 
 
 
