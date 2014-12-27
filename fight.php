@@ -12,7 +12,7 @@ include_once("nodebite-swiss-army-oop.php");
 //and store it in the $db variable
 $ds = new DBObjectSaver(array(
   "host" => "127.0.0.1",
-  "dbname" => "character_db",
+  "dbname" => "wu14oop2",
   "username" => "root",
   "password" => "mysql",
   "prefix" => "characters_trial"
@@ -45,7 +45,6 @@ $ds = new DBObjectSaver(array(
 if (!count($ds->monsters)) {
   //create new monster
   $southern_dragon = New Southern_dragon("Southern Dragon");
-  $northern_dragon = New Northern_dragon("Northern Dragon");
 
   //create new weapon for monster
   // $southern_dragons_weapon = New Weapon($southern_dragon);
