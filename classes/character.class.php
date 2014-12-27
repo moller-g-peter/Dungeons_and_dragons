@@ -8,7 +8,7 @@ class Character extends Base {
   public $name;
   public $health = 100;
   public $level = 1;
-  public $strength = 10;
+  public $strength = 1;
 
   //weapon is protected so that no one can steal it
   protected $weapon = FALSE;
@@ -26,21 +26,21 @@ class Character extends Base {
   }
 
   // methods (similar to functions)
-  public function greet(){
-    return "Hi! My name is ".$this->name."!";
-  }
+  // public function greet(){
+  //   return "Hi! My name is ".$this->name."!";
+  // }
 
   //writing &$otherCharacter in the declaration below
   //tells PHP to take in $otherCharacter as a reference
   public function attack(&$otherCharacter, $randomness = 1){
-    if(!$otherCharacter->isAlive()){
-      return $this->name. " tries to attack ".$otherCharacter->name.
-      " but ".$otherCharacter->name." is already dead!";
-    }
-    elseif (!$this->isAlive()) {
-      return $this->name. " tries to attack ".$otherCharacter->name.
-      " but ".$this->name." only succeeds in flopping around like a fish!";
-    }
+    // if(!$otherCharacter->isAlive()){
+    //   return $this->name. " tries to attack ".$otherCharacter->name.
+    //   " but ".$otherCharacter->name." is already dead!";
+    // }
+    // elseif (!$this->isAlive()) {
+    //   return $this->name. " tries to attack ".$otherCharacter->name.
+    //   " but ".$this->name." only succeeds in flopping around like a fish!";
+    // }
 
     $level_diff = $this->level / $otherCharacter->level;
 
@@ -54,7 +54,7 @@ class Character extends Base {
 
     $damage = round($this->strength * $level_diff * $randomness * $weapon_multiplier);
 
-    $this -> health += $damage;
+    // $this -> health += $damage;
     $otherCharacter -> health -= $damage;
     if(!$otherCharacter->isAlive()){
       //increase my level by one when i kill someone
