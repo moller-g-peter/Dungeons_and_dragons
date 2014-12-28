@@ -50,10 +50,11 @@ if (!count($ds->monsters)) {
   // $dark_knight = New Dark_Knight("Dark Knight");
   // $owl_eye = New Owl_Eye("Owl Eye");
   // $vampir = New Vampir("Vampir");
+
   //create new weapon for monster
   // $South_Dragons_weapon = New Weapon($south_dragon);
 
-  //start tracking monster instance
+  //start tracking (läggs in som en array och används) monster instance
   $ds->monsters[] = $south_dragon;
   $ds->monsters[] = $north_dragon;
 }
@@ -70,12 +71,23 @@ else {
 if (!count($ds->heroes)) {
   //create new hero
   $knight = New Knight("Knight");
+  $archer = New Archer("Archer");
+  $sorcerer = New Sorcerer("Sorcerer");
 
   //create new weapon for hero
-  $knights_weapon = New Weapon($knight);
+  $knights_weapon = New Sword($knight);
+  $knights_weapon = New Hammer($knight);
+  $knights_weapon = New Armour($knight);
+  $knights_weapon = New Shield($knight);
+  $archers_weapon = New Bow($archer);
+  // $archers_weapon = New Arrow($archer);
+  $sorcerers_weapon = New Staff($sorcerer);
+  $sorcerers_weapon = New Robe($sorcerer);
 
   //track hero class instance
   $ds->heroes[] = $knight;
+  $ds->heroes[] = $archer;
+  $ds->heroes[] = $sorcerer;
 }
 //elseif we did load any heroes from the DB
 else {

@@ -42,7 +42,7 @@ class North_Dragon extends Character {
     //   $weapon_multiplier = $this->weapon->damage;
     // }
 
-    $damage = round($this->strength * $level_diff * $randomness * $weapon_multiplier);
+    $damage = round($this->strength * $level_diff * $randomness);
 
     // $this -> health += $damage;
     $otherCharacter -> health -= $damage;
