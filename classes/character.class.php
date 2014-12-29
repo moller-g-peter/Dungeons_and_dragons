@@ -52,7 +52,7 @@ class Character extends Base {
       $weapon_multiplier = $this->weapon->damage;
     }
 
-    $damage = round($this->strength * $level_diff * $randomness * $weapon_multiplier);
+    $damage = round($this->strength * $level_diff * $randomness + $weapon_multiplier);
 
     // $this -> health += $damage;
     $otherCharacter -> health -= $damage;

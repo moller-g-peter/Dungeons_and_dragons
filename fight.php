@@ -35,7 +35,7 @@ $ds = new DBObjectSaver(array(
  */
 
 //DBObjectSaver always returns an array even for properties
-//that have not been used by us yet using a getter (__get()). 
+//that have not been used by us yet using a getter (__get()).
 //therefor any property we request will always be set meaning
 //isset() will always return true. Therefore only use count().
 
@@ -46,10 +46,10 @@ if (!count($ds->monsters)) {
   //create new monster
   $south_dragon = New South_Dragon("South Dragon");
   $north_dragon = New North_Dragon("North Dragon");
-  // $necromancer = New Necromancer("Necromancer");
-  // $dark_knight = New Dark_Knight("Dark Knight");
-  // $owl_eye = New Owl_Eye("Owl Eye");
-  // $vampir = New Vampir("Vampir");
+  $necromancer = New Necromancer("Necromancer");
+  $dark_knight = New Dark_Knight("Dark Knight");
+  $owl_eye = New Owl_Eye("Owl Eye");
+  $vampir = New Vampir("Vampir");
 
   //create new weapon for monster
   // $South_Dragons_weapon = New Weapon($south_dragon);
@@ -57,17 +57,29 @@ if (!count($ds->monsters)) {
   //start tracking (läggs in som en array och används) monster instance
   $ds->monsters[] = $south_dragon;
   $ds->monsters[] = $north_dragon;
+  $ds->monsters[] = $necromancer;
+  $ds->monsters[] = $dark_knight;
+  $ds->monsters[] = $owl_eye;
+  $ds->monsters[] = $vampir;
 }
 //elseif we did load any monsters from the DB
 else {
   //store a reference to $ds->monsters[0] in the variable $south_dragon
+  // här hämtar man karaktärena och ger dom ett nummer
   $south_dragon = &$ds->monsters[0];
   $north_dragon = &$ds->monsters[1];
+  $necromancer = &$ds->monsters[2];
+  $dark_knight = &$ds->monsters[3];
+  $owl_eye = &$ds->monsters[4];
+  $vampir = &$ds->monsters[5];
 }
+
+// $test = !count($ds->heroes);
 
 //Tracking of a hero
 //Did we load a hero or should we make a new one?
 //if we did not load any heroes from the DB
+// echo ($test;)
 if (!count($ds->heroes)) {
   //create new hero
   $knight = New Knight("Knight");
@@ -78,22 +90,27 @@ if (!count($ds->heroes)) {
   $knights_weapon = New Sword($knight);
   $knights_weapon = New Hammer($knight);
   $knights_weapon = New Armour($knight);
-  $knights_weapon = New Shield($knight);
-  $archers_weapon = New Bow($archer);
+  // $knights_weapon = New Shield($knight);
+  // $archers_weapon = New Bow($archer);
   // $archers_weapon = New Arrow($archer);
-  $sorcerers_weapon = New Staff($sorcerer);
-  $sorcerers_weapon = New Robe($sorcerer);
+  // $sorcerers_weapon = New Staff($sorcerer);
+  // $sorcerers_weapon = New Robe($sorcerer);
 
   //track hero class instance
   $ds->heroes[] = $knight;
-  $ds->heroes[] = $archer;
-  $ds->heroes[] = $sorcerer;
+  // $ds->heroes[] = $archer;
+  // $ds->heroes[] = $sorcerer;
 }
 //elseif we did load any heroes from the DB
 else {
   //store a reference to $ds->heroes[0] in the variable $knight
   $knight = &$ds->heroes[0];
 }
+
+// mitt försök till for loop
+// for($i=0; $i < count($ds->heroes); $i++){
+//   // echo($ds->heroes[i]->Knight);
+// }
 
 //Tracking of a story
 //Did we load a story or should we make a new one?
@@ -165,6 +182,8 @@ function healthCheck($character){
 }
 
 
+// här bestäms vilken knapp du tryckte på (med hjälp av click function)
+// lägg in fler val här sedan!
 //before this specific part of the story happens,
 //check if we recieved any options
 if (isset($_REQUEST["selectedOption"])) {
@@ -184,10 +203,10 @@ if (isset($_REQUEST["selectedOption"])) {
 //all functions and methods called directly below return strings
 //add new parts of the story onto the $story array()
 //ps: $story is a reference to $ds->story
-$story[] = $south_dragon->attack($knight);
+$story[] = $north_dragon->attack($knight);
 $story[] = healthCheck($knight);
-$story[] = $knight->attack($south_dragon);
-$story[] = healthCheck($south_dragon);
+$story[] = $knight->attack($north_dragon);
+$story[] = healthCheck($north_dragon);
 
 
 

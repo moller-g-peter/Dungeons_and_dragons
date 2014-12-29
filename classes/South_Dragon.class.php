@@ -16,9 +16,9 @@ class South_Dragon extends Character {
     return $this->allowed_strikes > 0;
   }
 
-  // public function set_monster_strike($bool) {
-  //   $this->monster_strike = $bool;
-  // }
+  public function set_monster_strike($bool) {
+    $this->monster_strike = $bool;
+  }
 
   //an override of the original attack() method
   //also takes in $otherCharacter by reference (&)
@@ -37,10 +37,10 @@ class South_Dragon extends Character {
     //if this character has a weapon, add a weapon
     //multiplier based on the combination between
     //character strenght and weapon damage
-    $weapon_multiplier = 1;
-    if ($this->weapon) {
-      $weapon_multiplier = $this->weapon->damage;
-    }
+    // $weapon_multiplier = 1;
+    // if ($this->weapon) {
+    //   $weapon_multiplier = $this->weapon->damage;
+    // }
 
     $damage = round($this->strength * $level_diff * $randomness);
 

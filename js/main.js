@@ -68,6 +68,10 @@ $(function() {
     });
   });
 
+
+
+  // denna funktion kopplas till fight.php med valen "monster strike" eller "potion"
+  // ...det beror på vilken knapp du tryckte på rad 25-29 här i JS
   function sendSelectedOption(selectedOption) {
     //fight AJAX with request data
     $.ajax({

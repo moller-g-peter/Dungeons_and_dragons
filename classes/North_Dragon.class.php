@@ -22,7 +22,7 @@ class North_Dragon extends Character {
 
   //an override of the original attack() method
   //also takes in $otherCharacter by reference (&)
-    public function attack(&$otherCharacter, $randomness = 1){
+  public function attack(&$otherCharacter, $randomness = 1){
     // if(!$otherCharacter->isAlive()){
     //   return $this->name. " tries to attack ".$otherCharacter->name.
     //   " but ".$otherCharacter->name." is already dead!";
