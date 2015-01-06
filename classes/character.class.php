@@ -3,13 +3,14 @@
 class character {
 	
 	protected $character_name;
-	protected $level = 0;
+	protected $level = 50;
+	protected $health = 25;
+	protected $strength = 25;
+	protected $dexterity = 25;
+	protected $intelligence = 25;
+	protected $critical_hit = 1;
+	protected $items = array();
 
-	protected $health = 0;
-	protected $strength = 0;
-	protected $dexterity = 0;
-	protected $intelligence = 0;
 
-	protected $critical_hit = 0;
 
 }

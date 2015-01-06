@@ -10,7 +10,7 @@ $ds = new DBObjectSaver(array(
   "dbname" => "wu14oop2",
   "username" => "root",
   "password" => "mysql",
-  "prefix" => "characters_trial"
+  "prefix" => "Save_data"
 ));
 
 //if there is a request to reset the file
