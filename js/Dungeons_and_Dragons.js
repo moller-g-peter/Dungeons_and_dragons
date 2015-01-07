@@ -1,18 +1,48 @@
 $(function() {
- 
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   $(".attack").click(function() {
 	// console.log ("click success");
     $.ajax({
       url:"battle_generator.php",
       dataType: "json",
-      success: function(data) {
+      success: function() {
         console.log("Success: ");
       },
-      error: function(data) {
+      error: function() {
         console.log("Failure: ");
       }
     });
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   // $(".reset").click(function() {

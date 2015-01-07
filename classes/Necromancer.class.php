@@ -2,21 +2,25 @@
 
 class Necromancer extends character {
 
-	protected $character_name;
-	protected $health;
-	protected $strength;
-	protected $critical_hit;
+	// protected $name;
+	// protected $health = 100;
+	// protected $strength = 1;
+	// protected $critical_hit;
 
-
-
-
-
-
-	public function set_character_name($character_name1){
-		$this->character_name = $character_name1;
+	public function __construct($name) 
+	{
+		$this->name = $name;
+		$health = 100;
+		$strength = 1;
+		// $this->level = $level;
+		// $this->health = $health;
 	}
 
-	public function get_character_name(){
-		return $this->character_name;
-	}
+	// public function set_character_name($name){
+	// 	$this->name = $name;
+	// }
+
+	// public function get_character_name(){
+	// 	return $this->name;
+	// }
 }

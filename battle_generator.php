@@ -14,75 +14,45 @@ $data_base = new DBObjectSaver(array(
 // skapar karaktärer om inte dessa finns i databasen
 if (!count($data_base->characters)){
 
-	$object_king_arthur = New Knight();
-	$object_king_arthur->set_character_name("King Arthur");
+	$object_king_arthur = New Knight("King Arthur");
+	// $object_king_arthur->set_character_name("King Arthur");
 
 	$data_base->characters[] = $object_king_arthur;
 }else {
-  	$object_king_arthur = &$data_base->characters[0];
+  	$object_king_arthur = $data_base->characters[0];
 }
 
 //--------------------------------------------------------------
-// skapar fiender om inte dessa finns i databasen
+
 if (!count($data_base->enemies)){
 
-	$object_necromancer = New Necromancer();
-	$object_necromancer->set_character_name("Necro Mancer");
+	$object_necromancer = New Necromancer("Necro Mancer");
+	// $object_necromancer->set_character_name("Necro Mancer");
 
 	$data_base->enemies[] = $object_necromancer;
 }else {
-  	$object_necromancer = &$data_base->enemies[0];
+  	$object_necromancer = $data_base->enemies[0];
 }
 
+while($object_king_arthur->is_alive() == true && $object_necromancer->is_alive() == true){
+  echo ($object_king_arthur->battle($object_necromancer));
+  echo ($object_necromancer->battle($object_king_arthur));
+}
+
+var_dump($object_necromancer);
+var_dump($object_king_arthur);
 //--------------------------------------------------------------
 // (måste ha variabelnamn($...) som värde för att hämta från DB)
 $battle_order = array($object_king_arthur, $object_necromancer);
 
-var_dump($battle_order);
+// var_dump($battle_order);
 
 //--------------------------------------------------------------
-// if-sats för hit metoder
-$t10_dice = get_random_no rand(1,10);
+// kollar alla karaktärers health points
+// denna ska separeras på skärmen senare
 
-public function battle($opposite_character){
+function HP_status($character_name){
 
-	if($t10_dice >=2 && $t10_dice <= 9){ // normal hit
-		$get_random_no(1,10);
-		$ (opponent) - t10_dice 
-	}
-	elseif($t10_dice = 10){ // critical hit!!
-		$t10_dice += get_random_no(1,10);
-		// här plus:ar du på 1:a "get_rand..." med 2:a "get_rand..."
-	}
-	else $t10_dice = 1 { // no hit...opposite_character dodges attack
-		echo ("<p>You missed!!</p>");
-	}
+  $character_health = $character_name->name." HP: ".$character_name->health;
+  return $health;
 }
-
-// här sätts värdet för skadan som sker i if-satsen ovan
-$damage = round($health - $t10_dice);
-
-$opponent->$health = round($health - $damage);
-
-//--------------------------------------------------------------
-// 
-if($object_king_arthur){
-	$
-}
-
-
-
-
-
-
-//--------------------------------------------------------------
-
-
-
-
-
-
-//--------------------------------------------------------------
-
-
-// var_dump($data_base);
