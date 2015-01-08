@@ -1,17 +1,18 @@
 <?php
 
-class character
+class character extends Base
 {
 	
 	protected $name;
 	protected $level = 50;
+	
 	protected $health = 1000;
-	// protected $strength = 25;
-	// protected $dexterity = 25;
-	// protected $intelligence = 25;
+	protected $strength = 25;
+	protected $dexterity = 25;
+	protected $intelligence = 25;
 
 	// protected $critical_hit = 1;
-	// protected $items = array();
+	protected $items = array();
 
 	public function __construct($name) 
 	{
@@ -20,12 +21,12 @@ class character
 		// $this->health = $health;
 	}
 
-	public function set_character_name($name)
+	public function set_name($name)
 	{
 		$this->name = $name;
 	}
 
-	public function get_character_name()
+	public function get_name()
 	{
 		return $this->name;
 	}
@@ -46,7 +47,7 @@ class character
 
 	public function battle($opponent)
 	{
-		$damage;
+		$damage = 0;
 		$t10_dice_roll = rand(1,10);
 		$result;
 		if($this->is_alive())
@@ -55,20 +56,20 @@ class character
 			{
 				// critical hit!!
 				$damage = rand(1,10);
-				$opponent->set_health($opponent->get_health - $damage);
-				$result = "A critical hit!! of damage.";
+				$opponent->health -= $damage;
+				$result = "A critical hit!! ".$damage." of damage.";
 			}
 			else if ($t10_dice_roll == 1)
 			{
 				// no hit...opponent dodges attack
-				$result = "The attack missed!suffers 0 of damage.";
+				$result = "The attack missed!suffers ".$damage." of damage.";
 			}
 			else
 			{
 				// normal hit
 				$damage = rand(1,10);
-				$opponent->set_health($opponent->get_health - $damage);
-				$result = "hits of damage.";
+				$opponent->health -= $damage;
+				$result = "hits of ".$damage." damage.";
 			}
 
 			if ($opponent->is_alive())
