@@ -36,23 +36,25 @@ if (!count($data_base->enemies)){
 
 while($object_king_arthur->is_alive() == true && $object_necromancer->is_alive() == true){
   echo ($object_king_arthur->battle($object_necromancer));
+  echo $health;
   echo ($object_necromancer->battle($object_king_arthur));
 }
 
 var_dump($object_necromancer);
 var_dump($object_king_arthur);
+
 //--------------------------------------------------------------
 // (måste ha variabelnamn($...) som värde för att hämta från DB)
+
 $battle_order = array($object_king_arthur, $object_necromancer);
 
 // var_dump($battle_order);
 
 //--------------------------------------------------------------
 // kollar alla karaktärers health points
-// denna ska separeras på skärmen senare
 
-function HP_status($character_name){
+function HP_status($name){
 
-  $character_health = $character_name->name." HP: ".$character_name->health;
+  $health = $name->name." HP: ".$name->health;
   return $health;
 }

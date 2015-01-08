@@ -10,7 +10,7 @@ class Necromancer extends character {
 	public function __construct($name) 
 	{
 		$this->name = $name;
-		$health = 100;
+		$health = 1000;
 		$strength = 1;
 		// $this->level = $level;
 		// $this->health = $health;

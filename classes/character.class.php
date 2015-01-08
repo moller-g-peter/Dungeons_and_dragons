@@ -1,11 +1,11 @@
 <?php
 
-class character 
+class character
 {
 	
 	protected $name;
 	protected $level = 50;
-	protected $health = 25;
+	protected $health = 1000;
 	// protected $strength = 25;
 	// protected $dexterity = 25;
 	// protected $intelligence = 25;
@@ -54,7 +54,7 @@ class character
 			if($t10_dice_roll == 10)
 			{
 				// critical hit!!
-				$damage = rand(1,10).$t10_dice_roll;
+				$damage = rand(1,10);
 				$opponent->set_health($opponent->get_health - $damage);
 				$result = "A critical hit!! of damage.";
 			}
@@ -78,12 +78,12 @@ class character
 			else
 			{
 				$this->level++;
-				return $this->name." won the battle and leveled up to level ".$this->level;
+				return $this->name." won the battle and leveled up to level ".$this->level."<br>";
 			}
 		}
 		else
 		{
-			return $this->name. "is stone fucking dead.";
+			return $this->name. " is stone fucking dead!<br>";
 		}
 	}
 

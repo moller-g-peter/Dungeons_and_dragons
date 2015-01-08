@@ -1,18 +1,4 @@
 $(function() {
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   $(".attack").click(function() {
