@@ -123,10 +123,22 @@ $battle_order = array($object_king_arthur, $object_necromancer);
 
 // var_dump($battle_order);
 
+//-------------------------------------------------------------
 
-$object_weapons = array();
-  
-  $object_weapons[] = New weapon("Elf Sword", array("strength" => 10,));
-  $object_weapons[] = New weapon("Oak Bow", array("strength" => 10,));
-  $object_weapons[] = New weapon("Dwarf Axe", array("strength" => 10,));
+$object_weapons = array();  
+  $object_weapons[] = New weapon("Elf Sword", array("Strength" => 0,));
+  $object_weapons[] = New weapon("Oak Bow", array("Strength" => 0,));
+  $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 0,));
+//-------------------------------------------------------------
 
+$object_armors = array();  
+  $object_armor[] = New item("Mithril Shirt", array("Strength" => 0,));
+  $object_armor[] = New item("Plate Armor", array("Strength" => 0,));
+  $object_armor[] = New item("Robe", array("Strength" => 0,));
+//-------------------------------------------------------------
+
+$object_items = array();  
+  $object_items[] = New item("Potion", array("Heal" => 0,));
+  $object_items[] = New item("Herb", array("Heal" => 0,));
+  $object_items[] = New item("Beer", array("Strength" => 0, "Drunk" => 0));
+//-------------------------------------------------------------
