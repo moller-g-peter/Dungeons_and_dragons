@@ -68,6 +68,7 @@ unset($data_base->characters);
 // );
 
 $object_protagonists = array();
+
   $object_protagonists[] = New Protagonists(
     "King Arthur", 
     array(
