@@ -1,6 +1,6 @@
 <?php
 
-class Necromancer extends character {
+class Antagonist extends character {
 
 	// protected $name;
 	// protected $health = 100;
@@ -10,10 +10,8 @@ class Necromancer extends character {
 	public function __construct($name) 
 	{
 		$this->name = $name;
-		$health = 1000;
+		$health = 10;
 		$strength = 1;
-		// $this->level = $level;
-		// $this->health = $health;
 	}
 
 	// public function set_character_name($name){

@@ -11,100 +11,164 @@ $data_base = new DBObjectSaver(array(
 ));
 
 // nollställer (i mitt fall databasen "$data_base") vid sidomladdning 
-unset($data_base);
-
+unset($data_base->characters);
+// exit();
 //--------------------------------------------------------------
 // kollar alla karaktärers health points
 
-function HP_status($name){
+// function HP_status($name){
 
-  $health = $name->name." HP: ".$name->health;
-  return $health;
-}
+//   $health = $name->name." HP: ".$name->health;
+//   return $health;
+// }
 
 //--------------------------------------------------------------
 // skapar karaktärer om inte dessa finns i databasen
-if (!count($data_base->characters)){
+// if (!count($data_base->characters)){
 
-	$object_king_arthur = New Knight("King Arthur");
+	// $object_king_arthur = New Knight("King Arthur");
   // $object_legolas = New Archer("Legolas");
   // $object_merlin = New Sorcerer("Merlin");
 
 	// $object_legolas->set_name("Legolas");
 
-	$data_base->characters[] = &$object_king_arthur;
+	// $data_base->characters[] = &$object_king_arthur;
   // $data_base->characters[] = &$object_legolas;
   // $data_base->characters[] = &$object_merlin;
-}
-else 
-{
-  	$object_king_arthur = &$data_base->characters[0];
+// }
+// else 
+// {
+  	// $object_king_arthur = &$data_base->characters[0];
     // $object_legolas = &$data_base->characters[1];
     // $object_merlin = &$data_base->characters[2];
-}
+// }
 
 //--------------------------------------------------------------
 
-if (!count($data_base->enemies)){
+// if (!count($data_base->enemies)){
+	// $object_necromancer = New Necromancer("Necro Mancer");
 
-	$object_necromancer = New Necromancer("Necro Mancer");
-  // $object_south_dragon = New South_Dragon("South Dragon");
-  // $object_north_dragon = New North_Dragon("North Dragon");
-  // $object_dark_knight = New Dark_Knight("Dark Knight");
-  // $object_owl_eye = New Owl_Eye("Owl Eye");
-  // $object_vampir = New Vampir("Vampir");
-  // $object_skeleton = New Skeleton("Skeleton");
-  // $object_manticor = New Manticor("Manticor");
-  // $object_ghoul = New Ghoul("Ghoul");
-  // $object_magician = New Magician("Magician");
 
 	// $object_necromancer->set_character_name("Necro Mancer");
 
-	$data_base->enemies[] = &$object_necromancer;
-  // $data_base->enemies[] = &$object_south_dragon;
-  // $data_base->enemies[] = &$object_north_dragon;
-  // $data_base->enemies[] = &$object_dark_knight;
-  // $data_base->enemies[] = &$object_owl_eye;
-  // $data_base->enemies[] = &$object_vampir;
-  // $data_base->enemies[] = &$object_skeleton;
-  // $data_base->enemies[] = &$object_manticor;
-  // $data_base->enemies[] = &$object_ghoul;
-  // $data_base->enemies[] = &$object_magician;
-}
-else
-{
-  	$object_necromancer = &$data_base->enemies[0];
-    // $object_south_dragon = &$data_base->enemies[1];
-    // $object_north_dragon = &$data_base->enemies[2];
-    // $object_dark_knight = &$data_base->enemies[3];
-    // $object_owl_eye = &$data_base->enemies[4];
-    // $object_vampir = &$data_base->enemies[5];
-    // $object_skeleton = &$data_base->enemies[6];
-    // $object_manticor = &$data_base->enemies[7];
-    // $object_ghoul = &$data_base->enemies[8];
-    // $object_magician = &$data_base->enemies[9];
-}
+	// $data_base->enemies[] = &$object_necromancer;
+// }
+// else
+// {
+  	// $object_necromancer = &$data_base->enemies[0];
+// }
 
 //$player = $objekt_king_arthur;
-$player = New Protagonists
-(
-  "ProtoTeam",
-  $object_king_arthur,
-  $object_legolas,
-  $object_merlin
-);
+// $object_players = New Protagonists
+// (
+//   "ProtoTeam",
+//   $object_king_arthur,
+//   $object_legolas,
+//   $object_merlin
+// );
+
+$object_protagonists = array();
+  $object_protagonists[] = New Protagonists(
+    "King Arthur", 
+    array(
+      "Health" => 100,
+      "Strength" => 10,
+      "Dexterity" => 10,
+      "Intelligence" => 10
+    ),
+      "Legolas", array(
+      "Health" => 100,
+      "Strength" => 10,
+      "Dexterity" => 10,
+      "Intelligence" => 10
+    ),
+      "Merlin", array(
+      "Health" => 100,
+      "Strength" => 10,
+      "Dexterity" => 10,
+      "Intelligence" => 10
+    )
+  );
 
 
-$enemy = $object_necromancer;
+
+
+
+$object_antagonists = array();
+
+  $object_antagonists[] = New Antagonist(
+    "Necro Mancer", array(
+      "Health" => 100,
+      "Strength" => 10
+    )
+  );
+  $object_antagonists[] = New Antagonist(
+    "South Dragon", array(
+      "Health" => 100,
+      "Strength" => 10
+    )
+  );
+  $object_antagonists[] = New Antagonist(
+    "North Dragon", array(
+      "Health" => 100,
+      "Strength" => 10
+    )
+  );
+  $object_antagonists[] = New Antagonist(
+    "Dark Knight", array(
+      "Health" => 100,
+      "Strength" => 10
+    )
+  );
+  $object_antagonists[] = New Antagonist(
+    "Owl Eye", array(
+      "Health" => 100,
+      "Strength" => 10
+    )
+  );
+  $object_antagonists[] = New Antagonist(
+    "Vampir", array(
+      "Health" => 100,
+      "Strength" => 10
+    )
+  );
+  $object_antagonists[] = New Antagonist(
+    "Skeleton", array(
+      "Health" => 100,
+      "Strength" => 10
+    )
+  );
+  $object_antagonists[] = New Antagonist(
+    "Manticor", array(
+      "Health" => 100,
+      "Strength" => 10
+    )
+  );
+  $object_antagonists[] = New Antagonist(
+    "Ghoul", array(
+      "Health" => 100,
+      "Strength" => 10
+    )
+  );
+  $object_antagonists[] = New Antagonist(
+    "Magician", array(
+      "Health" => 100,
+      "Strength" => 10
+    )
+  );
+
+// $enemy = $object_necromancer;
 
 $battle_story = array();
+// var_dump($object_protagonists);
+// exit();
 
-while($player->is_alive() == true && $enemy->is_alive() == true){
+while($object_protagonists->is_alive() == true && $object_antagonists->is_alive() == true){
   //echo ("<br>".$object_king_arthur->battle($object_necromancer));
-  $battle_story[] = $player->battle($enemy);
-  $battle_story[] = $enemy->battle($player);
-  $battle_story[] = HP_status($player);
-  $battle_story[] = HP_status($enemy);
+  $battle_story[] = $object_protagonists->battle($object_antagonists[0]);
+  $battle_story[] = $object_antagonists->battle($object_protagonists);
+  $battle_story[] = HP_status($object_protagonists);
+  $battle_story[] = HP_status($object_antagonists);
 }
 
   for($i=0;$i<count($battle_story);$i++){
@@ -112,7 +176,7 @@ while($player->is_alive() == true && $enemy->is_alive() == true){
     echo "<br>";
   }
 
-// var_dump($battle_story);
+var_dump($battle_story);
 // var_dump($player);
 // var_dump($enemy);
 
@@ -143,14 +207,3 @@ $object_items = array();
   $object_items[] = New item("Beer", array("Strength" => 0, "Drunk" => 0));
 //-------------------------------------------------------------
 
-$object_antagonists = array();
-  $object_antagonists[] = New Antagonist("Necro Mancer");
-  $object_antagonists[] = New Antagonist("South Dragon");
-  $object_antagonists[] = New Antagonist("North Dragon");
-  $object_antagonists[] = New Antagonist("Dark Knight");
-  $object_antagonists[] = New Antagonist("Owl Eye");
-  $object_antagonists[] = New Antagonist("Vampir");
-  $object_antagonists[] = New Antagonist("Skeleton");
-  $object_antagonists[] = New Antagonist("Manticor");
-  $object_antagonists[] = New Antagonist("Ghoul");
-  $object_antagonists[] = New Antagonist("Magician");

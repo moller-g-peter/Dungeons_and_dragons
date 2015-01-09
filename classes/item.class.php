@@ -3,7 +3,7 @@
 class item extends Base {
 	
 	protected $heal = 10;
-	protected $ = -10;
+	protected $drunk = -10;
 
 
 	public function __construct($weapon_damage) 
