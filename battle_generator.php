@@ -122,3 +122,11 @@ while($player->is_alive() == true && $enemy->is_alive() == true){
 $battle_order = array($object_king_arthur, $object_necromancer);
 
 // var_dump($battle_order);
+
+
+$object_weapons = array();
+  
+  $object_weapons[] = New weapon("Elf Sword", array("strength" => 10,));
+  $object_weapons[] = New weapon("Oak Bow", array("strength" => 10,));
+  $object_weapons[] = New weapon("Dwarf Axe", array("strength" => 10,));
+
