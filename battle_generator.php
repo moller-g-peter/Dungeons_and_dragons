@@ -129,16 +129,28 @@ $object_weapons = array();
   $object_weapons[] = New weapon("Elf Sword", array("Strength" => 0,));
   $object_weapons[] = New weapon("Oak Bow", array("Strength" => 0,));
   $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 0,));
-//-------------------------------------------------------------
+
 
 $object_armors = array();  
-  $object_armor[] = New item("Mithril Shirt", array("Strength" => 0,));
-  $object_armor[] = New item("Plate Armor", array("Strength" => 0,));
-  $object_armor[] = New item("Robe", array("Strength" => 0,));
-//-------------------------------------------------------------
+  $object_armors[] = New armor("Mithril Shirt", array("Strength" => 0,));
+  $object_armors[] = New armor("Plate Armor", array("Strength" => 0,));
+  $object_armors[] = New armor("Robe", array("Strength" => 0,));
+
 
 $object_items = array();  
   $object_items[] = New item("Potion", array("Heal" => 0,));
   $object_items[] = New item("Herb", array("Heal" => 0,));
   $object_items[] = New item("Beer", array("Strength" => 0, "Drunk" => 0));
 //-------------------------------------------------------------
+
+$object_antagonists = array();
+  $object_antagonists[] = New Antagonist("Necro Mancer");
+  $object_antagonists[] = New Antagonist("South Dragon");
+  $object_antagonists[] = New Antagonist("North Dragon");
+  $object_antagonists[] = New Antagonist("Dark Knight");
+  $object_antagonists[] = New Antagonist("Owl Eye");
+  $object_antagonists[] = New Antagonist("Vampir");
+  $object_antagonists[] = New Antagonist("Skeleton");
+  $object_antagonists[] = New Antagonist("Manticor");
+  $object_antagonists[] = New Antagonist("Ghoul");
+  $object_antagonists[] = New Antagonist("Magician");

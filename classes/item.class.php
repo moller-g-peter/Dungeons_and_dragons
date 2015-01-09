@@ -1,8 +1,9 @@
 <?php
 
-class weapon extends Base {
+class item extends Base {
 	
-	protected $weapon_damage = 10;
+	protected $heal = 10;
+	protected $ = -10;
 
 
 	public function __construct($weapon_damage) 
