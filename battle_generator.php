@@ -170,7 +170,7 @@ $battle_order = array($object_king_arthur, $object_necromancer);
 
 //-------------------------------------------------------------
 
-// $object_weapons = array();  
+$object_weapons = array();  
   $object_weapons[] = New weapon("Elf Sword", array("Strength" => 10,));
 //   $object_weapons[] = New weapon("Oak Bow", array("Strength" => 0,));
 //   $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 0,));
