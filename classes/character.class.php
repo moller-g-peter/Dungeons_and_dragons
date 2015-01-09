@@ -6,19 +6,16 @@ class character extends Base
 	protected $name;
 	protected $level = 50;
 	
-	protected $health = 1000;
+	protected $health = 100;
 	protected $strength = 25;
 	protected $dexterity = 25;
 	protected $intelligence = 25;
 
-	// protected $critical_hit = 1;
 	protected $items = array();
 
 	public function __construct($name) 
 	{
 		$this->name = $name;
-		// $this->level = $level;
-		// $this->health = $health;
 	}
 
 	public function set_name($name)

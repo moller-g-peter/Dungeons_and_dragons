@@ -2,18 +2,12 @@
 
 class Protagonists extends character {
 
-	// public $protagonists = array(
-	//  	array( [0] => "Knight",'strength' => 100),
-	// 	array( [1] => "Archer",'speed' => 90),
-	// 	array( [2] => "Sorcerer",'stamina' => 80),
-	// );
 	protected $members = array();
 
 	public function __construct($name, $human_player, $computer_player) {
 		
-
-			$this->members[] = $human_player;
-			$this->members[] = $computer_player;
+		$this->members[] = $human_player;
+		$this->members[] = $computer_player;
 	
 		
 		$this->health = $human_player->health+$computer_player->health;
@@ -28,18 +22,5 @@ class Protagonists extends character {
 		}
 
 		parent::__construct($name);
-	}
-
-
-
-
-	// public $protagonists = array( 
-	// 	"Knight" => array
-	// 	(
-	// 	"" => ,	    
-	// 	"" => ,	    
-	// 	"" => 	    
-	// 	),
-	// );
-    
+	}    
 }
