@@ -167,9 +167,9 @@ $battle_story = array();
 while($object_protagonists->is_alive() == true && $object_antagonists->is_alive() == true){
   //echo ("<br>".$object_king_arthur->battle($object_necromancer));
   $battle_story[] = $object_protagonists->battle($object_antagonists[0]);
-  $battle_story[] = $object_antagonists->battle($object_protagonists);
-  $battle_story[] = HP_status($object_protagonists);
-  $battle_story[] = HP_status($object_antagonists);
+  $battle_story[] = $object_antagonists->battle($object_protagonists[0]);
+  $battle_story[] = HP_status($object_protagonists[0]);
+  $battle_story[] = HP_status($object_antagonists[0]);
 }
 
   for($i=0;$i<count($battle_story);$i++){
