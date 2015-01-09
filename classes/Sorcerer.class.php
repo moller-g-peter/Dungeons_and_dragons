@@ -1,6 +1,6 @@
 <?php
 
-class Knight extends character {
+class Sorcerer extends character {
 
 	// protected $hero_name;
 

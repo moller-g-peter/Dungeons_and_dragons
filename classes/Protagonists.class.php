@@ -11,10 +11,10 @@ class Protagonists extends character {
 		$this->members[] = $computer_player2;
 	
 		
-		$this->health = $human_player->health+$computer_player1->health+$computer_player->health2;
-		$this->dexterity = $human_player->dexterity+$computer_player->dexterity;
-		$this->intelligence = $human_player->intelligence+$computer_player->intelligence;
-		$this->strength = $human_player->strength+$computer_player->strength;
+		$this->health = $human_player->health+$computer_player1->health+$computer_player2->health;
+		$this->dexterity = $human_player->dexterity+$computer_player1->dexterity+$computer_player2->dexterity;
+		$this->intelligence = $human_player->intelligence+$computer_player1->intelligence+$computer_player2->intelligence;
+		$this->strength = $human_player->strength+$computer_player1->strength+$computer_player2->strength;
 
 		for($i=0;$i<count($this->members);$i++){
 			for($j=0;$j<count($this->members[$i]->items);$j++){

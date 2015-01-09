@@ -26,9 +26,16 @@ unset($data_base->characters);
 // skapar karaktärer om inte dessa finns i databasen
 // if (!count($data_base->characters)){
 
-	// $object_king_arthur = New Knight("King Arthur");
-  // $object_legolas = New Archer("Legolas");
-  // $object_merlin = New Sorcerer("Merlin");
+	$object_king_arthur = New Knight("King Arthur");
+  $object_legolas = New Archer("Legolas");
+  $object_merlin = New Sorcerer("Merlin");
+
+  $object_protagonists[] = New Protagonists(
+    "Protagonists",
+    $object_king_arthur,
+    $object_legolas,
+    $object_merlin
+  );
 
 	// $object_legolas->set_name("Legolas");
 
@@ -66,33 +73,6 @@ unset($data_base->characters);
 //   $object_legolas,
 //   $object_merlin
 // );
-
-$object_protagonists = array();
-
-  $object_protagonists[] = New Protagonists(
-    "King Arthur", 
-    array(
-      "Health" => 100,
-      "Strength" => 10,
-      "Dexterity" => 10,
-      "Intelligence" => 10
-    ),
-      "Legolas", array(
-      "Health" => 100,
-      "Strength" => 10,
-      "Dexterity" => 10,
-      "Intelligence" => 10
-    ),
-      "Merlin", array(
-      "Health" => 100,
-      "Strength" => 10,
-      "Dexterity" => 10,
-      "Intelligence" => 10
-    )
-  );
-
-
-
 
 
 $object_antagonists = array();
@@ -164,10 +144,10 @@ $battle_story = array();
 // var_dump($object_protagonists);
 // exit();
 
-while($object_protagonists->is_alive() == true && $object_antagonists->is_alive() == true){
+while($object_protagonists[0]->is_alive() == true && $object_antagonists[0]->is_alive() == true){
   //echo ("<br>".$object_king_arthur->battle($object_necromancer));
-  $battle_story[] = $object_protagonists->battle($object_antagonists[0]);
-  $battle_story[] = $object_antagonists->battle($object_protagonists[0]);
+  $battle_story[] = $object_protagonists[0]->battle($object_antagonists[0]);
+  $battle_story[] = $object_antagonists[0]->battle($object_protagonists[0]);
   $battle_story[] = HP_status($object_protagonists[0]);
   $battle_story[] = HP_status($object_antagonists[0]);
 }
@@ -190,21 +170,21 @@ $battle_order = array($object_king_arthur, $object_necromancer);
 
 //-------------------------------------------------------------
 
-$object_weapons = array();  
-  $object_weapons[] = New weapon("Elf Sword", array("Strength" => 0,));
-  $object_weapons[] = New weapon("Oak Bow", array("Strength" => 0,));
-  $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 0,));
+// $object_weapons = array();  
+//   $object_weapons[] = New weapon("Elf Sword", array("Strength" => 0,));
+//   $object_weapons[] = New weapon("Oak Bow", array("Strength" => 0,));
+//   $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 0,));
 
 
-$object_armors = array();  
-  $object_armors[] = New armor("Mithril Shirt", array("Strength" => 0,));
-  $object_armors[] = New armor("Plate Armor", array("Strength" => 0,));
-  $object_armors[] = New armor("Robe", array("Strength" => 0,));
+// $object_armors = array();  
+//   $object_armors[] = New armor("Mithril Shirt", array("Strength" => 0,));
+//   $object_armors[] = New armor("Plate Armor", array("Strength" => 0,));
+//   $object_armors[] = New armor("Robe", array("Strength" => 0,));
 
 
-$object_items = array();  
-  $object_items[] = New item("Potion", array("Heal" => 0,));
-  $object_items[] = New item("Herb", array("Heal" => 0,));
-  $object_items[] = New item("Beer", array("Strength" => 0, "Drunk" => 0));
+// $object_items = array();  
+//   $object_items[] = New item("Potion", array("Heal" => 0,));
+//   $object_items[] = New item("Herb", array("Heal" => 0,));
+//   $object_items[] = New item("Beer", array("Strength" => 0, "Drunk" => 0));
 //-------------------------------------------------------------
 

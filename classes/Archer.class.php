@@ -1,13 +1,6 @@
 <?php
 
-class Knight extends character {
-
-	// protected $hero_name;
-
-	// protected $dexterity;
-	// protected $intelligence;
-	// protected $critical_hit;
-	// protected $items = array();
+class Archer extends character {
 	
 	
 	public function __construct($name) 
@@ -16,8 +9,6 @@ class Knight extends character {
 		$level = 50;
 		$health = 100;
 		$strength = 1;
-		// $this->level = $level;
-		// $this->health = $health;
 	}
 
 
