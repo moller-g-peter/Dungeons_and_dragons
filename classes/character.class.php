@@ -7,7 +7,7 @@ class character extends Base
 	protected $level = 50;
 	
 	protected $health = 100;
-	protected $strength = 25;
+	protected $strength = 1;
 	protected $dexterity = 25;
 	protected $intelligence = 25;
 
@@ -52,7 +52,7 @@ class character extends Base
 			if($t10_dice_roll == 10)
 			{
 				// critical hit!!
-				$damage = rand(1,10);
+				$damage = rand(1,10) + $t10_dice_roll;
 				$opponent->health -= $damage;
 				$result = "A critical hit!! ".$damage." of damage.";
 			}

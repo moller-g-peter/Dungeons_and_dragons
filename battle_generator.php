@@ -16,11 +16,11 @@ unset($data_base->characters);
 //--------------------------------------------------------------
 // kollar alla karaktärers health points
 
-// function HP_status($name){
+function HP_status($name){
 
-//   $health = $name->name." HP: ".$name->health;
-//   return $health;
-// }
+  $health = $name->name." HP: ".$name->health;
+  return $health;
+}
 
 //--------------------------------------------------------------
 // skapar karaktärer om inte dessa finns i databasen
@@ -171,7 +171,7 @@ $battle_order = array($object_king_arthur, $object_necromancer);
 //-------------------------------------------------------------
 
 // $object_weapons = array();  
-//   $object_weapons[] = New weapon("Elf Sword", array("Strength" => 0,));
+  $object_weapons[] = New weapon("Elf Sword", array("Strength" => 10,));
 //   $object_weapons[] = New weapon("Oak Bow", array("Strength" => 0,));
 //   $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 0,));
 
@@ -188,3 +188,4 @@ $battle_order = array($object_king_arthur, $object_necromancer);
 //   $object_items[] = New item("Beer", array("Strength" => 0, "Drunk" => 0));
 //-------------------------------------------------------------
 
+var_dump($object_weapons);
