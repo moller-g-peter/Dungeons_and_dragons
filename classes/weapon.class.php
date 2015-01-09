@@ -2,11 +2,13 @@
 
 class weapon extends Base {
 	
-	protected $weapon_damage = 10;
+	public $weapon_name;
+	public $weapon_damage = 100;
 
 
-	public function __construct($weapon_damage) 
+	public function __construct($weapon_name, $weapon_damage) 
 	{
+		$this->weapon_name = $weapon_name;
 		$this->weapon_damage = $weapon_damage;
 	}
 

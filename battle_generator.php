@@ -149,7 +149,7 @@ while($object_protagonists[0]->is_alive() == true && $object_antagonists[0]->is_
   $battle_story[] = $object_protagonists[0]->battle($object_antagonists[0]);
   $battle_story[] = $object_antagonists[0]->battle($object_protagonists[0]);
   $battle_story[] = HP_status($object_protagonists[0]);
-  $battle_story[] = HP_status($object_antagonists[0]);
+  $battle_story[] = HP_status($object_antagonists[0])."<br>";
 }
 
   for($i=0;$i<count($battle_story);$i++){
@@ -171,7 +171,7 @@ $battle_order = array($object_king_arthur, $object_necromancer);
 //-------------------------------------------------------------
 
 $object_weapons = array();  
-  $object_weapons[] = New weapon("Elf Sword", array("Strength" => 10,));
+  $object_weapons[] = New Weapon("Elf Sword", array("Weapon damage" => 100));
 //   $object_weapons[] = New weapon("Oak Bow", array("Strength" => 0,));
 //   $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 0,));
 
@@ -187,5 +187,7 @@ $object_weapons = array();
 //   $object_items[] = New item("Herb", array("Heal" => 0,));
 //   $object_items[] = New item("Beer", array("Strength" => 0, "Drunk" => 0));
 //-------------------------------------------------------------
+$dennis = "<hr>";
+var_dump($dennis);
 
 var_dump($object_weapons);
