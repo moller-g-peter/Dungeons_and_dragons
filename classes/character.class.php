@@ -67,7 +67,6 @@ class character extends Base
 			if($t10_dice_roll == 10)
 			{
 				// critical hit!!
-
 				for ($i=0; $i < count($object_weapons); $i++){
 					$damage += $object_weapons[$i]->weapon_strength;					
 				}
@@ -86,12 +85,11 @@ class character extends Base
 			else
 			{
 				// normal hit
-				
 				for ($i=0; $i < count($object_weapons); $i++){
 					$damage += $object_weapons[$i]->weapon_strength;	
 				}
 
-				$damage = rand(1,10) + $object_weapons[0];
+				$damage = rand(1,10);
 				$opponent->health -= $damage;
 				$object_weapons = $this->weapons;
 
