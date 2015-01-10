@@ -5,7 +5,7 @@ class character extends Base
 	
 	protected $name;
 	protected $level = 50;
-	protected $weapons = array();
+	// protected $weapons = array();
 	// protected $armors = array();
 	// protected $items = array();
 	

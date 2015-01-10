@@ -7,7 +7,7 @@ class weapon extends Base {
 	protected $weapon_skills = array();
 
 
-	public function __construct($weapon_name, $weapon_skills) 
+	public function __construct($weapon_name, $weapon_skills)
 	{
 		$this->weapon_name = $weapon_name;
 		$this->weapon_skills = $weapon_skills;
