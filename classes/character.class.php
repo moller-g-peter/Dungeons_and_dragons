@@ -74,12 +74,12 @@ class character extends Base
 					$damage += $object_weapons[$i]->weapon_strength;
 				}
 
-				$result = $opponent->name." attacks.<br>"."A critical hit!! ".$this->name." suffers ".$damage." point(s) of damage.<br>";
+				$result = $this->name." attacks.<br>"."A critical hit!! ".$opponent->name." suffers ".$damage." point(s) of damage.<br>";
 			}
 			else if ($t10_dice_roll == 1)
 			{
 				// no hit...opponent dodges attack
-				$result = $opponent->name." attacks.<br>"."The attack missed! ".$this->name." suffers ".$damage." point(s) of damage.<br>";
+				$result = $this->name." attacks.<br>"."The attack missed! ".$opponent->name." suffers ".$damage." point(s) of damage.<br>";
 			}
 			else
 			{
@@ -92,7 +92,7 @@ class character extends Base
 					$damage += $object_weapons[$i]->weapon_strength;	
 				}
 
-				$result = $opponent->name." attacks.<br>".$this->name." is hit and suffers ".$damage." point(s) of damage.<br>";
+				$result = $this->name." attacks.<br>".$opponent->name." is hit and suffers ".$damage." point(s) of damage.<br>";
 			}
 
 					if ($opponent->is_alive())

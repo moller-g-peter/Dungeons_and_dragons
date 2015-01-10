@@ -2,23 +2,33 @@
 
 class weapon extends Base {
 	
-	public $weapon_name;
-	public $weapon_strength = 10;
+	protected $weapon_name;
+	protected $weapon_strength = 10;
+	protected $weapon_skills = array();
 
 
-	public function __construct($weapon_name, $weapon_strength) 
+	public function __construct($weapon_name, $weapon_skills) 
 	{
 		$this->weapon_name = $weapon_name;
-		$this->weapon_strength = $weapon_strength;
+		$this->weapon_skills = $weapon_skills;
 	}
 
-	public function set_name($weapon_strength)
-	{
-		$this->weapon_strength = $weapon_strength;
-	}
+	// public function set_name($weapon_strength)
+	// {
+	// 	$this->weapon_strength = $weapon_strength;
+	// }
 
 	public function get_name()
 	{
 		return $this->weapon_strength;
+	}
+
+	public function get_weapon_strength()
+	{
+		$weapon_strength = $this->weapon_strength;
+		foreach ($this->weapon_skills as $skillName => $skillValue) {
+			$weapon_strength += $skillValue;
+		}
+		return $weapon_strength;
 	}
 }

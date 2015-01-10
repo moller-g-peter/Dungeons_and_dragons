@@ -13,9 +13,9 @@ $data_base = new DBObjectSaver(array(
 //-------------------------------------------------------------
 
 $object_weapons = array();  
-  $object_weapons[] = New Weapon("Elf Sword", array("Strength" => 10));
-  // $object_weapons[] = New weapon("Oak Bow", array("Strength" => 0));
-  // $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 0));
+  $object_weapons[] = New Weapon("Elf Sword", array("Weapon Strength" => 10));
+  // $object_weapons[] = New weapon("Oak Bow", array("Strength" => 20));
+  // $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 30));
 
 
 // $object_armors = array();  
@@ -51,6 +51,8 @@ function HP_status($name){
   $object_merlin = New Sorcerer("Merlin");
 
   $object_king_arthur->weapons = $object_weapons[0];
+  // $object_legolas->weapons = $object_weapons[1];
+  // $object_merlin->weapons = $object_weapons[2];
 
   $object_protagonists[] = New Protagonists(
     "Protagonists",
@@ -65,7 +67,7 @@ function HP_status($name){
   // $data_base->characters[] = &$object_legolas;
   // $data_base->characters[] = &$object_merlin;
 // }
-// else 
+// else
 // {
     // $object_king_arthur = &$data_base->characters[0];
     // $object_legolas = &$data_base->characters[1];
@@ -189,7 +191,7 @@ var_dump($battle_story);
 //--------------------------------------------------------------
 // (måste ha variabelnamn($...) som värde för att hämta från DB)
 
-$battle_order = array($object_king_arthur, $object_necromancer);
+// $battle_order = array($object_king_arthur, $object_necromancer);
 
 // var_dump($battle_order);
 
