@@ -6,8 +6,8 @@ class character extends Base
 	protected $name;
 	protected $level = 50;
 	protected $weapons = array();
-	protected $armors = array();
-	protected $items = array();
+	// protected $armors = array();
+	// protected $items = array();
 	
 	protected $health = 100;
 	protected $strength = 1;
@@ -85,7 +85,7 @@ class character extends Base
 			else
 			{
 				// normal hit
-				$damage = rand(1,10) + $object_weapons[0];
+				$damage = rand(1,10);
 				$opponent->health -= $damage;
 				$object_weapons = $this->weapons;
 				
