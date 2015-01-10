@@ -61,103 +61,66 @@ function HP_status($name){
     $object_merlin
   );
 
-  // $object_legolas->set_name("Legolas");
-
-  // $data_base->characters[] = &$object_king_arthur;
-  // $data_base->characters[] = &$object_legolas;
-  // $data_base->characters[] = &$object_merlin;
-// }
-// else
-// {
-    // $object_king_arthur = &$data_base->characters[0];
-    // $object_legolas = &$data_base->characters[1];
-    // $object_merlin = &$data_base->characters[2];
-// }
-
-//--------------------------------------------------------------
-
-// if (!count($data_base->enemies)){
-  // $object_necromancer = New Necromancer("Necro Mancer");
-
-
-  // $object_necromancer->set_character_name("Necro Mancer");
-
-  // $data_base->enemies[] = &$object_necromancer;
-// }
-// else
-// {
-    // $object_necromancer = &$data_base->enemies[0];
-// }
-
-//$player = $objekt_king_arthur;
-// $object_players = New Protagonists
-// (
-//   "ProtoTeam",
-//   $object_king_arthur,
-//   $object_legolas,
-//   $object_merlin
-// );
-
 
 $object_antagonists = array();
 
   $object_antagonists[] = New Antagonist(
     "Necro Mancer", array(
-      "Health" => 100,
+      "Health" => 1000,
       "Strength" => 10
     )
   );
   $object_antagonists[] = New Antagonist(
     "South Dragon", array(
-      "Health" => 100,
+      "Health" => 2000,
       "Strength" => 10
     )
   );
   $object_antagonists[] = New Antagonist(
     "North Dragon", array(
-      "Health" => 100,
+      "Health" => 3000,
       "Strength" => 10
     )
   );
   $object_antagonists[] = New Antagonist(
     "Dark Knight", array(
-      "Health" => 100,
+      "Health" => 4000,
       "Strength" => 10
     )
   );
   $object_antagonists[] = New Antagonist(
     "Owl Eye", array(
-      "Health" => 100,
+      "Health" => 5000,
       "Strength" => 10
     )
   );
   $object_antagonists[] = New Antagonist(
     "Vampir", array(
-      "Health" => 100,
+      "Health" => 6000,
       "Strength" => 10
     )
   );
   $object_antagonists[] = New Antagonist(
     "Skeleton", array(
-      "Health" => 100,
+      "Health" => 7000,
       "Strength" => 10
     )
   );
   $object_antagonists[] = New Antagonist(
     "Manticor", array(
-      "Health" => 100,
+      "Health" => 8000,
       "Strength" => 10
     )
   );
   $object_antagonists[] = New Antagonist(
     "Ghoul", array(
-      "Health" => 100,
+      "Health" => 9000,
       "Strength" => 10
     )
   );
   $object_antagonists[] = New Antagonist(
     "Magician", array(
-      "Health" => 100,
+      "Health" => 10000,
       "Strength" => 10
     )
   );
