@@ -31,7 +31,10 @@ class character extends Base
 //--------------------------------------------------------------
 		public function set_weapons($weapons)
 	{
+		if(count($this->weapons) < 3)
+		{
 		$this->weapons[] = $weapons;
+		}
 	}
 
 	public function get_weapons()
@@ -68,7 +71,7 @@ class character extends Base
 				$object_weapons = $this->weapons;
 				for ($i=0; $i < count($object_weapons); $i++){
 					$damage += $object_weapons[$i]->weapon_damage;
-				}	
+				}
 				$result = $opponent->name." attacks.<br>"."A critical hit!! ".$this->name." suffers ".$damage." point(s) of damage.<br>";
 			}
 			else if ($t10_dice_roll == 1)

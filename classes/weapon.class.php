@@ -3,7 +3,7 @@
 class weapon extends Base {
 	
 	public $weapon_name;
-	public $weapon_damage = 100;
+	public $weapon_damage = 10;
 
 
 	public function __construct($weapon_name, $weapon_damage) 

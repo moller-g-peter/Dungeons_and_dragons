@@ -17,8 +17,8 @@ class Protagonists extends character {
 		$this->strength = $human_player->strength+$computer_player1->strength+$computer_player2->strength;
 
 		for($i=0;$i<count($this->members);$i++){
-			for($j=0;$j<count($this->members[$i]->items);$j++){
-				$this->items[] = $this->members[$i]->items[$j];
+			for($j=0;$j<count($this->members[$i]->weapons);$j++){
+				$this->weapons[] = $this->members[$i]->weapons[$j];
 			}
 		}
 
