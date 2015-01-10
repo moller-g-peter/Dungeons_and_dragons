@@ -47,8 +47,8 @@ function HP_status($name){
 // if (!count($data_base->characters)){
 
   $object_king_arthur = New Knight("King Arthur");
-  $object_legolas = New Archer("Legolas");
-  $object_merlin = New Sorcerer("Merlin");
+  // $object_legolas = New Archer("Legolas");
+  // $object_merlin = New Sorcerer("Merlin");
 
   $object_king_arthur->weapons = $object_weapons[0];
   // $object_legolas->weapons = $object_weapons[1];
@@ -66,7 +66,7 @@ $object_antagonists = array();
 
   $object_antagonists[] = New Antagonist(
     "Necro Mancer", array(
-      "Health" => 1000,
+      "Health" => 700,
       "Strength" => 10
     )
   );

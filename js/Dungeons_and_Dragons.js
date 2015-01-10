@@ -1,19 +1,53 @@
 $(function() {
 
+  function hideFirst(){
+    $(".inputField").hide();
+    $(".buttons").hide();
+  }
+  hideFirst();
 
-  $(".attack").click(function() {
-	// console.log ("click success");
-    $.ajax({
-      url:"battle_generator.php",
-      dataType: "json",
-      success: function() {
-        console.log("Success: ");
-      },
-      error: function() {
-        console.log("Failure: ");
-      }
-    });
+  $(".Knight").click(function(){
+    $(".inputField").show();
   });
+
+  $(".Archer").click(function(){
+    $(".inputField").show();
+  });
+
+  $(".Sorcerer").click(function(){
+    $(".inputField").show();
+  });
+
+
+  $(".").click(function(){
+    $(".inputField").show();
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //  $(".attack").click(function() {
+	// // console.log ("click success");
+ //    $.ajax({
+ //      url:"battle_generator.php",
+ //      dataType: "json",
+ //      success: function() {
+ //        console.log("Success: ");
+ //      },
+ //      error: function() {
+ //        console.log("Failure: ");
+ //      }
+ //    });
+ //  });
 
 
 
