@@ -53,9 +53,9 @@ class character extends Base
 			{
 				// critical hit!!
 				$damage = rand(1,10) + $t10_dice_roll;
-				$opponent->health -= $damage;
 				for ($i=0; $i < count($object_weapons); $i++){
-					$damage += $object_weapons[$i]->weapon_damage;	
+					$damage += $object_weapons[$i]->weapon_damage;
+				$opponent->health -= $damage;
 				}	
 				$result = $opponent->name." attacks.<br>"."A critical hit!! ".$this->name." suffers ".$damage." point(s) of damage.<br>";
 			}
@@ -68,9 +68,9 @@ class character extends Base
 			{
 				// normal hit
 				$damage = rand(1,10);
-				$opponent->health -= $damage;
 				for ($i=0; $i < count($object_weapons); $i++){
 					$damage += $object_weapons[$i]->weapon_damage;	
+				$opponent->health -= $damage;
 				}
 				$result = $opponent->name." attacks.<br>".$this->name." is hit and suffers ".$damage." point(s) of damage.<br>";
 			}

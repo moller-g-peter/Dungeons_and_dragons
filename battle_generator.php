@@ -157,6 +157,9 @@ while($object_protagonists[0]->is_alive() == true && $object_antagonists[0]->is_
     echo "<br>";
   }
 
+$hr = "<hr>";
+var_dump($hr);
+
 var_dump($battle_story);
 // var_dump($player);
 // var_dump($enemy);
@@ -187,7 +190,7 @@ $object_weapons = array();
 //   $object_items[] = New item("Herb", array("Heal" => 0,));
 //   $object_items[] = New item("Beer", array("Strength" => 0, "Drunk" => 0));
 //-------------------------------------------------------------
-$dennis = "<hr>";
-var_dump($dennis);
+$hr = "<hr>";
+var_dump($hr);
 
 var_dump($object_weapons);
