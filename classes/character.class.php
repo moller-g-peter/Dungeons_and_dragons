@@ -6,13 +6,14 @@ class character extends Base
 	protected $name;
 	protected $level = 50;
 	protected $weapons = array();
+	protected $armors = array();
+	protected $items = array();
 	
 	protected $health = 100;
 	protected $strength = 1;
 	protected $dexterity = 25;
 	protected $intelligence = 25;
 
-	protected $items = array();
 
 	public function __construct($name) 
 	{
@@ -84,7 +85,7 @@ class character extends Base
 			else
 			{
 				// normal hit
-				$damage = rand(1,10);
+				$damage = rand(1,10) + $object_weapons[0];
 				$opponent->health -= $damage;
 				$object_weapons = $this->weapons;
 				
