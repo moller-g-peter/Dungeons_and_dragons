@@ -1,3 +1,19 @@
+body {
+    /*background-image: url("../img/infoWall.jpg");*/
+    /*background-repeat: no-repeat;*/
+   	/*background-attachment: fixed;*/
+   	/*background-position: center;*/
+   	/*background-size: 80%;*/
+}
+
+.buttons {
+	margin-top: 15px;
+}
+
+.inputField {
+	margin-top: 15px;
+}
+
 .characters {
 	display: inline-block;
 	border: 2px solid black;
