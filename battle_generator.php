@@ -10,6 +10,26 @@ $data_base = new DBObjectSaver(array(
   "prefix" => "Save_data"
 ));
 
+//-------------------------------------------------------------
+
+$object_weapons = array();  
+  $object_weapons[] = New Weapon("Elf Sword", array("Strength" => 10));
+  // $object_weapons[] = New weapon("Oak Bow", array("Strength" => 0));
+  // $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 0));
+
+
+// $object_armors = array();  
+//   $object_armors[] = New armor("Mithril Shirt", array("Strength" => 0,));
+//   $object_armors[] = New armor("Plate Armor", array("Strength" => 0,));
+//   $object_armors[] = New armor("Robe", array("Strength" => 0,));
+
+
+// $object_items = array();  
+//   $object_items[] = New item("Potion", array("Heal" => 0,));
+//   $object_items[] = New item("Herb", array("Heal" => 0,));
+//   $object_items[] = New item("Beer", array("Strength" => 0, "Drunk" => 0));
+//-------------------------------------------------------------
+
 // nollställer (i mitt fall databasen "$data_base") vid sidomladdning 
 unset($data_base->characters);
 // exit();
@@ -26,9 +46,11 @@ function HP_status($name){
 // skapar karaktärer om inte dessa finns i databasen
 // if (!count($data_base->characters)){
 
-	$object_king_arthur = New Knight("King Arthur");
+  $object_king_arthur = New Knight("King Arthur");
   $object_legolas = New Archer("Legolas");
   $object_merlin = New Sorcerer("Merlin");
+
+  $object_king_arthur->weapons = $object_weapons[0];
 
   $object_protagonists[] = New Protagonists(
     "Protagonists",
@@ -37,15 +59,15 @@ function HP_status($name){
     $object_merlin
   );
 
-	// $object_legolas->set_name("Legolas");
+  // $object_legolas->set_name("Legolas");
 
-	// $data_base->characters[] = &$object_king_arthur;
+  // $data_base->characters[] = &$object_king_arthur;
   // $data_base->characters[] = &$object_legolas;
   // $data_base->characters[] = &$object_merlin;
 // }
 // else 
 // {
-  	// $object_king_arthur = &$data_base->characters[0];
+    // $object_king_arthur = &$data_base->characters[0];
     // $object_legolas = &$data_base->characters[1];
     // $object_merlin = &$data_base->characters[2];
 // }
@@ -53,16 +75,16 @@ function HP_status($name){
 //--------------------------------------------------------------
 
 // if (!count($data_base->enemies)){
-	// $object_necromancer = New Necromancer("Necro Mancer");
+  // $object_necromancer = New Necromancer("Necro Mancer");
 
 
-	// $object_necromancer->set_character_name("Necro Mancer");
+  // $object_necromancer->set_character_name("Necro Mancer");
 
-	// $data_base->enemies[] = &$object_necromancer;
+  // $data_base->enemies[] = &$object_necromancer;
 // }
 // else
 // {
-  	// $object_necromancer = &$data_base->enemies[0];
+    // $object_necromancer = &$data_base->enemies[0];
 // }
 
 //$player = $objekt_king_arthur;
@@ -171,25 +193,6 @@ $battle_order = array($object_king_arthur, $object_necromancer);
 
 // var_dump($battle_order);
 
-//-------------------------------------------------------------
-
-$object_weapons = array();  
-  $object_weapons[] = New Weapon("Elf Sword", array("Weapon damage" => 100));
-//   $object_weapons[] = New weapon("Oak Bow", array("Strength" => 0,));
-//   $object_weapons[] = New weapon("Dwarf Axe", array("Strength" => 0,));
-
-
-// $object_armors = array();  
-//   $object_armors[] = New armor("Mithril Shirt", array("Strength" => 0,));
-//   $object_armors[] = New armor("Plate Armor", array("Strength" => 0,));
-//   $object_armors[] = New armor("Robe", array("Strength" => 0,));
-
-
-// $object_items = array();  
-//   $object_items[] = New item("Potion", array("Heal" => 0,));
-//   $object_items[] = New item("Herb", array("Heal" => 0,));
-//   $object_items[] = New item("Beer", array("Strength" => 0, "Drunk" => 0));
-//-------------------------------------------------------------
 $hr = "<hr>";
 var_dump($hr);
 

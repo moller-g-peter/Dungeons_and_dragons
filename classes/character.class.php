@@ -5,6 +5,7 @@ class character extends Base
 	
 	protected $name;
 	protected $level = 50;
+	protected $weapons = array();
 	
 	protected $health = 100;
 	protected $strength = 1;
@@ -17,7 +18,7 @@ class character extends Base
 	{
 		$this->name = $name;
 	}
-
+//--------------------------------------------------------------
 	public function set_name($name)
 	{
 		$this->name = $name;
@@ -26,6 +27,16 @@ class character extends Base
 	public function get_name()
 	{
 		return $this->name;
+	}
+//--------------------------------------------------------------
+		public function set_weapons($weapons)
+	{
+		$this->weapons[] = $weapons;
+	}
+
+	public function get_weapons()
+	{
+		return $this->weapons;
 	}
 
 //--------------------------------------------------------------
@@ -53,9 +64,10 @@ class character extends Base
 			{
 				// critical hit!!
 				$damage = rand(1,10) + $t10_dice_roll;
+				$opponent->health -= $damage;
+				$object_weapons = $this->weapons;
 				for ($i=0; $i < count($object_weapons); $i++){
 					$damage += $object_weapons[$i]->weapon_damage;
-				$opponent->health -= $damage;
 				}	
 				$result = $opponent->name." attacks.<br>"."A critical hit!! ".$this->name." suffers ".$damage." point(s) of damage.<br>";
 			}
@@ -94,13 +106,9 @@ class character extends Base
 	public function is_alive()
 	{
 		if($this->health >0)
-		{
-			return true;
-		}
+		{return true;}
 		else
-		{
-			return false;
-		}
+		{return false;}
 	}
 }
 
