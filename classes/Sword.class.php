@@ -2,9 +2,9 @@
 
 // class Sword extends weapon {
 
-// 	public function __construct($weapon_damage) 
+// 	public function __construct($weapon_strength) 
 // 	{
-// 	$weapon_damage = 10;
-// 	$this->weapon_damage = $weapon_damage;
+// 	$weapon_strength = 10;
+// 	$this->weapon_strength = $weapon_strength;
 // 	}
 // }

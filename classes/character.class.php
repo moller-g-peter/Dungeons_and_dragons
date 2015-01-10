@@ -69,9 +69,11 @@ class character extends Base
 				$damage = rand(1,10) + $t10_dice_roll;
 				$opponent->health -= $damage;
 				$object_weapons = $this->weapons;
+
 				for ($i=0; $i < count($object_weapons); $i++){
-					$damage += $object_weapons[$i]->weapon_damage;
+					$damage += $object_weapons[$i]->weapon_strength;
 				}
+
 				$result = $opponent->name." attacks.<br>"."A critical hit!! ".$this->name." suffers ".$damage." point(s) of damage.<br>";
 			}
 			else if ($t10_dice_roll == 1)
@@ -83,22 +85,23 @@ class character extends Base
 			{
 				// normal hit
 				$damage = rand(1,10);
-				for ($i=0; $i < count($object_weapons); $i++){
-					$damage += $object_weapons[$i]->weapon_damage;	
 				$opponent->health -= $damage;
+				$object_weapons = $this->weapons;
+				
+				for ($i=0; $i < count($object_weapons); $i++){
+					$damage += $object_weapons[$i]->weapon_strength;	
 				}
+
 				$result = $opponent->name." attacks.<br>".$this->name." is hit and suffers ".$damage." point(s) of damage.<br>";
 			}
 
-			if ($opponent->is_alive())
-			{
-				return $result;
-			}
-			else
-			{
-				$this->level++;
-				return $this->name." stands victorius! ".$this->level." gained.<br>";
-			}
+					if ($opponent->is_alive())
+					{return $result;}
+					else
+					{
+						$this->level++;
+						return $this->name." stands victorius! ".$this->level." gained.<br>";
+					}
 		}
 		else
 		{
