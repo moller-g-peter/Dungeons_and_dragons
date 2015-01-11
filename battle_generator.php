@@ -57,3 +57,4 @@ $battle_story = array();
 // var_dump($object_weapons);
 // var_dump($object_armors);
 // var_dump($object_items);
+//lksdjfglknjdfgljdfg
