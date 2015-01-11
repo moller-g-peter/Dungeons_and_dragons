@@ -28,7 +28,7 @@ $(function() {
 
   $(".attack").click(function(){
     $.ajax({
-      url:"battle_generator.php",
+      url:"star_game.php",
       dataType: "json",
       success: function(data) {
         console.log("Fight is successful: ", data);

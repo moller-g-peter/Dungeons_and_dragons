@@ -10,6 +10,11 @@ $data_base = new DBObjectSaver(array(
   "prefix" => "Save_data"
 ));
 
+unset($data_base->weapons);
+unset($data_base->armors);
+unset($data_base->protagonists);
+unset($data_base->antagonists);
+
 $object_weapons = &$data_base->weapons;
 $object_armors = &$data_base->armors;
 $object_protagonists = &$data_base->protagonists;
@@ -34,7 +39,7 @@ $object_antagonists = &$data_base->antagonists;
 //-------------------------------------------------------------
 
 // nollställer (i mitt fall databasen "$data_base") vid sidomladdning 
-unset($data_base->characters);
+// unset($data_base->characters);
 // exit();
 //--------------------------------------------------------------
 // kollar alla karaktärers health points
