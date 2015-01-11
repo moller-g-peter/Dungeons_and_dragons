@@ -8,6 +8,7 @@ class character extends Base
 	protected $weapons = array();
 	protected $armors = array();
 	// protected $items = array();
+	protected $tools = array();
 	
 	protected $health = 100;
 	protected $strength = 1;
@@ -69,7 +70,19 @@ class character extends Base
 	}
 
 //--------------------------------------------------------------
+	public function set_tools($tools)
+	{
+		$this->tools = $tools;
+	}
+
+	public function get_tools()
+	{
+		return $this->tools;
+	}
+
+//--------------------------------------------------------------
 // if-sats för hit metoder
+	
 
 	public function battle($opponent)
 	{
