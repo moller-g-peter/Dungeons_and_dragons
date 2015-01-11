@@ -4,7 +4,7 @@ $(function() {
     $(".inputField").hide();
     $(".buttons").hide();
   }
-  
+
     hideFirst();
 
   $(".Knight").click(function(){
@@ -27,7 +27,18 @@ $(function() {
   });
 
   $(".attack").click(function(){
-
+    $.ajax({
+      url:"battle_generator.php",
+      dataType: "json",
+      success: function(data) {
+        console.log("Fight is successful: ", data);
+        $(".resultWindow").append("<p>" + data + "</p>");
+     // printStory(data);
+      },
+      error: function(data) {
+        console.log("Fight not successful ", data.responseText);
+      }
+    });
   });
 
   $(".magic").click(function(){
