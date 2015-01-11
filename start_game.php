@@ -27,7 +27,7 @@ $object_antagonists = &$data_base->antagonists;
 
 
 // $object_armors = array(); använd inte denna rad!!! 
-  $object_armors[] = New armor("Mithril Shirt", array("Armor Strength" => 10));
+  $object_armors[] = New armor("Mithril Shirt", array("Armor Strength" => 30));
   $object_armors[] = New armor("Plate Armor", array("Armor Strength" => 20));
   $object_armors[] = New armor("Robe", array("Armor Strength" => 30));
 

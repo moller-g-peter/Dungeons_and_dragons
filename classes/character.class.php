@@ -82,7 +82,7 @@ class character extends Base
 
 //--------------------------------------------------------------
 // if-sats för hit metoder
-	
+
 
 	public function battle($opponent)
 	{
@@ -94,19 +94,19 @@ class character extends Base
 			if($t10_dice_roll == 10)
 			{
 				// critical hit!!
-				$damage = rand(1,10) + $t10_dice_roll + $object_weapons[0] - $object_armors[0];
+				$damage = rand(1,10);
 				$object_weapons = $this->weapons;
-				$object_armors = $this->armors;
+				$object_armors = $opponent->armors;
 
 				for ($i=0; $i < count($object_weapons); $i++){
 					$damage += $object_weapons[$i]->weapon_strength;
 				}
 
 				for ($i=0; $i < count($object_armors); $i++){
-					$damage += $object_armors[$i]->armor_strength;
+					$damage -= $object_armors[$i]->armor_strength;
 				}
 
-				$opponent->health -= $damage;
+				$opponent->health -= $damage > 0 ? $damage : 0;
 
 				$result = $this->name." attacks.<br>"."A critical hit!! ".$opponent->name." suffers ".$damage." point(s) of damage.<br>";
 			}
@@ -120,14 +120,14 @@ class character extends Base
 				// normal hit
 				$damage = rand(1,10) + $object_weapons[0] - $object_armors[0];
 				$object_weapons = $this->weapons;
-				$object_armors = $this->armors;
+				$object_armors = $opponent->armors;
 				
 				for ($i=0; $i < count($object_weapons); $i++){
 					$damage += $object_weapons[$i]->weapon_strength;
 				}
 
 				for ($i=0; $i < count($object_armors); $i++){
-					$damage += $object_armors[$i]->armor_strength;
+					$damage -= $object_armors[$i]->armor_strength;
 				}
 
 				$opponent->health -= $damage;
@@ -159,5 +159,3 @@ class character extends Base
 }
 
 //--------------------------------------------------------------
-
-// jlshksdhjfsdf
