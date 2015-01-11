@@ -82,3 +82,7 @@ $object_antagonists = &$data_base->antagonists;
   $object_antagonists[] = New Antagonist("Manticor", array("Health" => 8000,"Strength" => 10));
   $object_antagonists[] = New Antagonist("Ghoul", array("Health" => 9000,"Strength" => 10));
   $object_antagonists[] = New Antagonist("Magician", array("Health" => 10000,"Strength" => 10));
+
+
+
+echo(json_encode(true));

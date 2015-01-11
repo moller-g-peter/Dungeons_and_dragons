@@ -1,4 +1,4 @@
-// <?php
+<?php
 
 include_once("nodebite-swiss-army-oop.php");
 
@@ -10,10 +10,10 @@ $data_base = new DBObjectSaver(array(
   "prefix" => "Save_data"
 ));
 
-$object_weapons = &$data_base->object_weapons;
-$object_armors = &$data_base->object_armors;
-$object_protagonists = &$data_base->object_protagonists;
-$object_antagonists = &$data_base->object_antagonists;
+$object_weapons = &$data_base->weapons;
+$object_armors = &$data_base->armors;
+$object_protagonists = &$data_base->protagonists;
+$object_antagonists = &$data_base->antagonists;
 
 
 function HP_status($name){

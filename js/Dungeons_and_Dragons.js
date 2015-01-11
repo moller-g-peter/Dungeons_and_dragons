@@ -20,6 +20,19 @@ $(function() {
   });
 
   $(".inputField").submit(function(){
+    $.ajax({
+      url:"battle_generator.php",
+      dataType: "json",
+      success: function(data) {
+        console.log("Fight is successful: ", data);
+        $(".resultWindow").append("<p>" + data + "</p>");
+     // printStory(data);
+      },
+      error: function(data) {
+        console.log("Fight not successful ", data.responseText);
+      }
+    });
+    
     $(".buttons").show();
     $(".characters").hide();
     $(".inputField").hide();
