@@ -80,7 +80,7 @@ $object_antagonists = array();
 $battle_story = array();
 // var_dump($object_protagonists);
 // exit();
-
+//
 while($object_protagonists[0]->is_alive() == true && $object_antagonists[0]->is_alive() == true){
   // echo ("<br>".$object_king_arthur->battle($object_necromancer));
   $battle_story[] = $object_protagonists[0]->battle($object_antagonists[0]);
