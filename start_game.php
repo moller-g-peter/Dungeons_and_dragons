@@ -10,15 +10,18 @@ $data_base = new DBObjectSaver(array(
   "prefix" => "Save_data"
 ));
 
-//-------------------------------------------------------------
+$object_weapons = &$data_base->weapons;
+$object_armors = &$data_base->armors;
+$object_protagonists = &$data_base->protagonists;
+$object_antagonists = &$data_base->antagonists;
 
-$object_weapons = array();  
+// $object_weapons = array();  
   $object_weapons[] = New Weapon("Elf Sword", array("Weapon Strength" => 100));
   $object_weapons[] = New weapon("Oak Bow", array("Weapon Strength" => 20));
   $object_weapons[] = New weapon("Dwarf Axe", array("Weapon Strength" => 30));
 
 
-$object_armors = array();  
+// $object_armors = array();  
   $object_armors[] = New armor("Mithril Shirt", array("Armor Strength" => 0));
   $object_armors[] = New armor("Plate Armor", array("Armor Strength" => 0));
   $object_armors[] = New armor("Robe", array("Armor Strength" => 0));
@@ -36,11 +39,11 @@ unset($data_base->characters);
 //--------------------------------------------------------------
 // kollar alla karaktärers health points
 
-function HP_status($name){
+// function HP_status($name){
 
-  $health = $name->name." HP: ".$name->health;
-  return $health;
-}
+//   $health = $name->name." HP: ".$name->health;
+//   return $health;
+// }
 
 //--------------------------------------------------------------
 // skapar karaktärer om inte dessa finns i databasen
@@ -62,7 +65,7 @@ function HP_status($name){
   );
 
 
-$object_antagonists = array();
+// $object_antagonists = array();
 
   $object_antagonists[] = New Antagonist("Necro Mancer", array("Health" => 70, "Strength" => 10));
   $object_antagonists[] = New Antagonist("South Dragon", array("Health" => 2000,"Strength" => 10));
