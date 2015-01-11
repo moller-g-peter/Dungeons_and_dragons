@@ -3,7 +3,7 @@
 class weapon extends Base {
 	
 	protected $weapon_name;
-	protected $weapon_strength = 10;
+	protected $weapon_strength = 0;
 	protected $weapon_skills = array();
 
 

@@ -5,8 +5,8 @@ class character extends Base
 	
 	protected $name;
 	protected $level = 50;
-	// protected $weapons = array();
-	// protected $armors = array();
+	protected $weapons = array();
+	protected $armors = array();
 	// protected $items = array();
 	
 	protected $health = 100;
@@ -44,6 +44,20 @@ class character extends Base
 	}
 
 //--------------------------------------------------------------
+		public function set_armors($armors)
+	{
+		if(count($this->armors) < 3)
+		{
+		$this->armors[] = $armors;
+		}
+	}
+
+	public function get_armors()
+	{
+		return $this->armors;
+	}
+
+//--------------------------------------------------------------
 	public function set_health($health)
 	{
 		$this->health = $health;
@@ -67,11 +81,16 @@ class character extends Base
 			if($t10_dice_roll == 10)
 			{
 				// critical hit!!
-				$damage = rand(1,10) + $t10_dice_roll + $object_weapons[0];
+				$damage = rand(1,10) + $t10_dice_roll + $object_weapons[0] - $object_armors[0];
 				$object_weapons = $this->weapons;
+				$object_armors = $this->armors;
 
 				for ($i=0; $i < count($object_weapons); $i++){
-					$damage += $object_weapons[$i]->weapon_strength;					
+					$damage += $object_weapons[$i]->weapon_strength;
+				}
+
+				for ($i=0; $i < count($object_armors); $i++){
+					$damage += $object_armors[$i]->armor_strength;
 				}
 
 				$opponent->health -= $damage;
@@ -86,11 +105,16 @@ class character extends Base
 			else
 			{
 				// normal hit
-				$damage = rand(1,10) + $object_weapons[0];
+				$damage = rand(1,10) + $object_weapons[0] - $object_armors[0];
 				$object_weapons = $this->weapons;
+				$object_armors = $this->armors;
 				
 				for ($i=0; $i < count($object_weapons); $i++){
-					$damage += $object_weapons[$i]->weapon_strength;	
+					$damage += $object_weapons[$i]->weapon_strength;
+				}
+
+				for ($i=0; $i < count($object_armors); $i++){
+					$damage += $object_armors[$i]->armor_strength;
 				}
 
 				$opponent->health -= $damage;

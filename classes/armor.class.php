@@ -2,21 +2,28 @@
 
 class armor extends Base {
 	
-	protected $protection = 10;
+	protected $armor_name;
+	protected $armor_strength = 0;
+	protected $armor_skills = array();
 
 
-	public function __construct($protection) 
+	public function __construct($armor_name, $armor_skills)
 	{
-		$this->protection = $protection;
-	}
-
-	public function set_name($protection)
-	{
-		$this->protection = $protection;
+		$this->armor_name = $armor_name;
+		$this->armor_skills = $armor_skills;
 	}
 
 	public function get_name()
 	{
-		return $this->protection;
+		return $this->armor_strength;
+	}
+
+	public function get_armor_strength()
+	{
+		$armor_strength = $this->armor_strength;
+		foreach ($this->armor_skills as $skillName => $skillValue) {
+			$armor_strength += $skillValue;
+		}
+		return $armor_strength;
 	}
 }
