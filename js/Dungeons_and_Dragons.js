@@ -26,7 +26,6 @@ $(function() {
       success: function(data) {
         console.log("start_game is successful: ", data);
         $(".resultWindow").append("<p>" + data + "</p>");
-     // printStory(data);
       },
       error: function(data) {
         console.log("start_game not successful ", data.responseText);
@@ -46,7 +45,6 @@ $(function() {
       success: function(data) {
         console.log("Fight is successful: ", data);
         $(".resultWindow").append("<p>" + data + "</p>");
-     // printStory(data);
       },
       error: function(data) {
         console.log("Fight not successful ", data.responseText);

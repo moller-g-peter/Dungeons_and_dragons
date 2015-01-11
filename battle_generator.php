@@ -17,7 +17,6 @@ $object_antagonists = &$data_base->antagonists;
 
 
 function HP_status($name){
-
   $health = $name->name." HP: ".$name->health;
   return $health;
 }

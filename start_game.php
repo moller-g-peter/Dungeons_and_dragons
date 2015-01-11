@@ -16,40 +16,26 @@ unset($data_base->protagonists);
 unset($data_base->antagonists);
 
 $object_weapons = &$data_base->weapons;
-$object_armors = &$data_base->armors;
+// $object_armors = &$data_base->armors;
 $object_protagonists = &$data_base->protagonists;
 $object_antagonists = &$data_base->antagonists;
 
-// $object_weapons = array();  
+// $object_weapons = array();  använd inte denna rad!!! 
   $object_weapons[] = New Weapon("Elf Sword", array("Weapon Strength" => 100));
   $object_weapons[] = New weapon("Oak Bow", array("Weapon Strength" => 20));
   $object_weapons[] = New weapon("Dwarf Axe", array("Weapon Strength" => 30));
 
 
-// $object_armors = array();  
-  $object_armors[] = New armor("Mithril Shirt", array("Armor Strength" => 0));
-  $object_armors[] = New armor("Plate Armor", array("Armor Strength" => 0));
-  $object_armors[] = New armor("Robe", array("Armor Strength" => 0));
+// $object_armors = array(); använd inte denna rad!!! 
+  // $object_armors[] = New armor("Mithril Shirt", array("Armor Strength" => 0));
+  // $object_armors[] = New armor("Plate Armor", array("Armor Strength" => 0));
+  // $object_armors[] = New armor("Robe", array("Armor Strength" => 0));
 
 
-// $object_items = array();  
+// $object_items = array();  använd inte denna rad!!! 
 //   $object_items[] = New item("Potion", array("Heal" => 0));
 //   $object_items[] = New item("Herb", array("Heal" => 0));
 //   $object_items[] = New item("Beer", array("Strength" => 0));
-//-------------------------------------------------------------
-
-// nollställer (i mitt fall databasen "$data_base") vid sidomladdning 
-// unset($data_base->characters);
-// exit();
-//--------------------------------------------------------------
-// kollar alla karaktärers health points
-
-// function HP_status($name){
-
-//   $health = $name->name." HP: ".$name->health;
-//   return $health;
-// }
-
 //--------------------------------------------------------------
 // skapar karaktärer om inte dessa finns i databasen
 // if (!count($data_base->characters)){
@@ -72,7 +58,7 @@ $object_antagonists = &$data_base->antagonists;
 
 // $object_antagonists = array();
 
-  $object_antagonists[] = New Antagonist("Necro Mancer", array("Health" => 70, "Strength" => 10));
+  $object_antagonists[] = New Antagonist("Necro Mancer", array("Health" => 700, "Strength" => 10));
   $object_antagonists[] = New Antagonist("South Dragon", array("Health" => 2000,"Strength" => 10));
   $object_antagonists[] = New Antagonist("North Dragon", array("Health" => 3000,"Strength" => 10));
   $object_antagonists[] = New Antagonist("Dark Knight", array("Health" => 4000,"Strength" => 10));

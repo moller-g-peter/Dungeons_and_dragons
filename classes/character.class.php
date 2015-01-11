@@ -86,7 +86,7 @@ class character extends Base
 			else
 			{
 				// normal hit
-				$damage = rand(1,10);
+				$damage = rand(1,10) + $object_weapons[0];
 				$object_weapons = $this->weapons;
 				
 				for ($i=0; $i < count($object_weapons); $i++){
