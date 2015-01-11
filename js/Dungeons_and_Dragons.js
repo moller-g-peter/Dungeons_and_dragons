@@ -21,18 +21,18 @@ $(function() {
 
   $(".inputField").submit(function(){
     $.ajax({
-      url:"battle_generator.php",
+      url:"start_game.php",
       dataType: "json",
       success: function(data) {
-        console.log("Fight is successful: ", data);
+        console.log("start_game is successful: ", data);
         $(".resultWindow").append("<p>" + data + "</p>");
      // printStory(data);
       },
       error: function(data) {
-        console.log("Fight not successful ", data.responseText);
+        console.log("start_game not successful ", data.responseText);
       }
     });
-    
+
     $(".buttons").show();
     $(".characters").hide();
     $(".inputField").hide();
