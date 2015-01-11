@@ -7,16 +7,9 @@ class Knight extends character {
 	protected $dexterity = 15;
 	protected $intelligence = 15;
 	
-	// public function __construct($name) 
-	// {
-	// 	$this->name = $name;
-	// 	$level = 50;
-	// 	$health = 10000;
-	// 	$strength = 1;
-	// }
+	
 
-
-
+//--------------------------------------------------------------
 	public function set_health($health)
 	{
 		$this->health = $health;

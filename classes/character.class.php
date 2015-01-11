@@ -7,7 +7,6 @@ class character extends Base
 	protected $level = 50;
 	protected $weapons = array();
 	protected $armors = array();
-	// protected $items = array();
 	protected $tools = array();
 	
 	protected $health = 100;
@@ -95,14 +94,14 @@ class character extends Base
 			{
 				// critical hit!!
 				$damage = rand(1,10);
-				
+
 				$object_weapons = $this->weapons;
 				$object_armors = $opponent->armors;
-				
+
 				for ($i=0; $i < count($object_weapons); $i++){
 					$damage += $object_weapons[$i]->weapon_strength;
 				}
-				
+
 				for ($i=0; $i < count($object_armors); $i++){
 					$damage -= $object_armors[$i]->armor_strength;
 				}
@@ -146,7 +145,7 @@ class character extends Base
 		}
 		else
 		{
-			return $this->name. " is stone fucking dead!<br>";
+			return $this->name. " is dead!<br>";
 		}
 	}
 
@@ -157,6 +156,28 @@ class character extends Base
 		else
 		{return false;}
 	}
+
+
+	public function item_quantity() {
+    return $this->item > 0;
+  	}
+
+
+	public function use_items() {
+		
+ 		if($this->item_quantity() && $this->is_alive()) {
+		$this->health += 30;
+     	$this->item --;
+     	return $this->name." restored ".$this->health." HP.<br>";
+		// $object_tools = $this->tools;	
+		}
+  	}
+
+
+
+
+
+
+
 }
 
-//--------------------------------------------------------------
