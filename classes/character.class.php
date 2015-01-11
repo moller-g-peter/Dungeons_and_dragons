@@ -95,13 +95,14 @@ class character extends Base
 			{
 				// critical hit!!
 				$damage = rand(1,10);
+				
 				$object_weapons = $this->weapons;
 				$object_armors = $opponent->armors;
-
+				
 				for ($i=0; $i < count($object_weapons); $i++){
 					$damage += $object_weapons[$i]->weapon_strength;
 				}
-
+				
 				for ($i=0; $i < count($object_armors); $i++){
 					$damage -= $object_armors[$i]->armor_strength;
 				}

@@ -62,16 +62,16 @@ $object_antagonists = &$data_base->antagonists;
 
 // $object_antagonists = array();
 
-  $object_antagonists[] = New Antagonist("Necro Mancer", array("Health" => 700, "Strength" => 10));
-  $object_antagonists[] = New Antagonist("South Dragon", array("Health" => 2000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("North Dragon", array("Health" => 3000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Dark Knight", array("Health" => 4000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Owl Eye", array("Health" => 5000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Vampir", array("Health" => 6000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Skeleton", array("Health" => 7000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Manticor", array("Health" => 8000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Ghoul", array("Health" => 9000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Magician", array("Health" => 10000,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("Necro Mancer", array("Health" => 100, "Strength" => 10));
+  $object_antagonists[] = New Antagonist("South Dragon", array("Health" => 150,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("North Dragon", array("Health" => 200,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("Dark Knight", array("Health" => 250,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("Owl Eye", array("Health" => 300,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("Vampir", array("Health" => 350,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("Skeleton", array("Health" => 400,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("Manticor", array("Health" => 450,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("Ghoul", array("Health" => 500,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("Magician", array("Health" => 550,"Strength" => 10));
 
 
 
