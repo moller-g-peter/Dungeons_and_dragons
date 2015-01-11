@@ -2,10 +2,10 @@
 
 class Archer extends character {
 	
-	protected $health = 100;
-	protected $strength = 1;
-	protected $dexterity = 25;
-	protected $intelligence = 25;
+	protected $health = 60;
+	protected $strength = 15;
+	protected $dexterity = 10;
+	protected $intelligence = 15;
 	
 	// public function __construct($name) 
 	// {
@@ -37,7 +37,6 @@ class Archer extends character {
 		return $this->strength;
 	}
 //--------------------------------------------------------------
-
 
 	public function set_dexterity($dexterity)
 	{

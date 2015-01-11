@@ -103,7 +103,7 @@ class character extends Base
 					else
 					{
 						$this->level++;
-						return $this->name." stands victorius! ".$this->level." gained.<br>";
+						return $this->name." stands victorious! ".$this->level." gained.<br>";
 					}
 		}
 		else

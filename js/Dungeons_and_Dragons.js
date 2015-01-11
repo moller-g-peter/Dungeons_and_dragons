@@ -4,7 +4,8 @@ $(function() {
     $(".inputField").hide();
     $(".buttons").hide();
   }
-  hideFirst();
+  
+    hideFirst();
 
   $(".Knight").click(function(){
     $(".inputField").show();
@@ -18,9 +19,48 @@ $(function() {
     $(".inputField").show();
   });
 
+  $(".inputField").submit(function(){
+    $(".buttons").show();
+    $(".characters").hide();
+    $(".inputField").hide();
+    return false;
+  });
 
-  $(".").click(function(){
-    $(".inputField").show();
+  $(".attack").click(function(){
+
+  });
+
+  $(".magic").click(function(){
+
+  });
+
+  $(".items").click(function(){
+
+  });
+
+  $(".cancel").click(function(){
+
+  });
+
+
+  $(".cancel").click(function() {
+    $.ajax({
+      //requests fight.php file
+      url:"cancel.php",
+      dataType: "json",
+      //sends {reset:1} as part of request
+      data: {
+        reset: 1
+      },
+      success: function(data) {
+        console.log("cancel fight");
+        $(".printFight").html("");
+        $(".printOptions").html("");
+      },
+      error: function(data) {
+        console.log("OMG I FAILED TO RESET! ", data.responseText);
+      }
+    });
   });
 
 
