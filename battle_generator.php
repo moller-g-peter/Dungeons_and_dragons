@@ -10,6 +10,12 @@ $data_base = new DBObjectSaver(array(
   "prefix" => "Save_data"
 ));
 
+$object_weapons = &$data_base->object_weapons;
+$object_armors = &$data_base->object_armors;
+$object_protagonists = &$data_base->object_protagonists;
+$object_antagonists = &$data_base->object_antagonists;
+
+
 function HP_status($name){
 
   $health = $name->name." HP: ".$name->health;
