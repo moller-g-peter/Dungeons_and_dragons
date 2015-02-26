@@ -1,12 +1,12 @@
 <?php
 
-class character extends Base
+class Character extends Base
 {
 	
 	public $name;
 	public $level = 50;
 	public $health = 100;
-	public $strength = 1;
+	// public $strength = 1;
 
 
 	// public $weapons = array();
