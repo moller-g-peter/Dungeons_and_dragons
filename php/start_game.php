@@ -10,11 +10,11 @@ $data_base = new DBObjectSaver(array(
   "prefix" => "Save_data"
 ));
 
-unset($data_base->weapons);
-unset($data_base->armors);
 unset($data_base->protagonists);
 unset($data_base->antagonists);
-unset($data_base->tools);
+// unset($data_base->weapons);
+// unset($data_base->armors);
+// unset($data_base->tools);
 
 $object_tools = &$data_base->tools;
 $object_weapons = &$data_base->weapons;
