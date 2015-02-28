@@ -2,9 +2,11 @@
 
 class Archer extends Character {
 	
-	// public $health = 60;
-	// public $strength = 15;
-	// public $dexterity = 10;
-	// public $intelligence = 15;
+	public $name;
+	public $level = 50;
+	public $health = 100;
+	public $strength = 0;
+	public $dexterity = 0;
+	public $intelligence = 0;
 
 }

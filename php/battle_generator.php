@@ -10,8 +10,8 @@ $data_base = new DBObjectSaver(array(
   "prefix" => "Save_data"
 ));
 
-$object_weapons = &$data_base->weapons;
-$object_armors = &$data_base->armors;
+// $object_weapons = &$data_base->weapons;
+// $object_armors = &$data_base->armors;
 $object_protagonists = &$data_base->protagonists;
 $object_antagonists = &$data_base->antagonists;
 

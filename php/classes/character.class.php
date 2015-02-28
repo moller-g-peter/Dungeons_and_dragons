@@ -4,82 +4,20 @@ class Character extends Base
 {
 	
 	public $name;
-	public $level = 50;
-	public $health = 100;
-	// public $strength = 1;
-
-
-	// public $weapons = array();
-	// public $armors = array();
-	// public $tools = array();
+	public $level = 0;
+	public $health = 0;
+	public $strength = 0;
+	public $dexterity = 0;
+	public $intelligence = 0;
 	
-	// public $dexterity = 25;
-	// public $intelligence = 25;
+	public $items = array();
+	
 
 
 	public function __construct($name) 
 	{
 		$this->name = $name;
 	}
-//--------------------------------------------------------------
-// 	public function set_name($name)
-// 	{
-// 		$this->name = $name;
-// 	}
-
-// 	public function get_name()
-// 	{
-// 		return $this->name;
-// 	}
-// //--------------------------------------------------------------
-// 		public function set_weapons($weapons)
-// 	{
-// 		if(count($this->weapons) < 3)
-// 		{
-// 		$this->weapons[] = $weapons;
-// 		}
-// 	}
-
-// 	public function get_weapons()
-// 	{
-// 		return $this->weapons;
-// 	}
-
-// //--------------------------------------------------------------
-// 		public function set_armors($armors)
-// 	{
-// 		if(count($this->armors) < 3)
-// 		{
-// 		$this->armors[] = $armors;
-// 		}
-// 	}
-
-// 	public function get_armors()
-// 	{
-// 		return $this->armors;
-// 	}
-
-// //--------------------------------------------------------------
-// 	public function set_health($health)
-// 	{
-// 		$this->health = $health;
-// 	}
-
-// 	public function get_health()
-// 	{
-// 		return $this->health;
-// 	}
-
-// //--------------------------------------------------------------
-// 	public function set_tools($tools)
-// 	{
-// 		$this->tools = $tools;
-// 	}
-
-// 	public function get_tools()
-// 	{
-// 		return $this->tools;
-// 	}
 
 //--------------------------------------------------------------
 // if-sats för hit metoder
@@ -184,7 +122,7 @@ class Character extends Base
 	// 	$this->health += 30;
  //     	$this->item --;
  //     	return $this->name." restored ".$this->health." HP.<br>";
-	// 	// $object_tools = $this->tools;	
+	// 	// $object_items = $this->items;	
 	// 	}
  //  	}
 

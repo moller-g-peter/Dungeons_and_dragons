@@ -5,7 +5,7 @@ include_once("nodebite-swiss-army-oop.php");
 
 //create a new instance of the DBObjectSaver class 
 //and store it in the $db variable
-$ds = new DBObjectSaver(array(
+$data_base = new DBObjectSaver(array(
   "host" => "127.0.0.1",
   "dbname" => "wu14oop2",
   "username" => "root",
@@ -25,9 +25,9 @@ $ds = new DBObjectSaver(array(
 */
 if (isset($_REQUEST["reset"])) {
   //unset monsters, heroes and story from $ds
-  unset($ds->monsters);
-  unset($ds->heroes);
-  unset($ds->story);
+  unset($data_base->antagonists);
+  unset($data_base->protagonists);
+  unset($data_base->story);
 }
 
 //echo something out so that AJAX still thinks
