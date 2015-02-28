@@ -10,8 +10,8 @@ $data_base = new DBObjectSaver(array(
   "prefix" => "Save_data"
 ));
 
-// $object_weapons = &$data_base->weapons;
-// $object_armors = &$data_base->armors;
+
+$object_items = &$data_base->items;
 $object_protagonists = &$data_base->protagonists;
 $object_antagonists = &$data_base->antagonists;
 
@@ -23,6 +23,7 @@ function HP_status($name){
 
 $battle_story = array();
 // var_dump($object_protagonists);
+// var_dump($object_antagonists);
 // exit();
 //
 // while($object_protagonists[0]->is_alive() == true && $object_antagonists[0]->is_alive() == true){

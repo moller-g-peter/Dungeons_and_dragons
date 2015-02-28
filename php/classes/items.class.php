@@ -1,14 +1,13 @@
-// <?php
+<?php
 
-// class items extends Base {
+class Items extends Base {
 	
-// 	public $name;
-// 	public $amount;
+	public $name;
+	public $skills;
 
-
-// 	public function __construct($name, $amount) 
-// 	{
-// 		$this->name = $name;
-// 		$this->amount = $amount;
-// 	}
-// }
+	public function __construct($name, $skills) 
+	{
+		$this->name = $name;
+		$this->skills = $skills;
+	}
+}

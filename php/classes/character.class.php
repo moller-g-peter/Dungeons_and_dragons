@@ -9,12 +9,14 @@ class Character extends Base
 	public $strength = 0;
 	public $dexterity = 0;
 	public $intelligence = 0;
+	public $critical_hit = 0;
 	
-	public $items = array();
+	public $object_items = array();
+	public $object_antagonists = array();
 	
 
 
-	public function __construct($name) 
+	public function __construct($name)
 	{
 		$this->name = $name;
 	}
@@ -34,7 +36,7 @@ class Character extends Base
 			if($t10_dice_roll == 10)
 			{
 				// critical hit!!
-				$damage = rand(1,10) + $t10_dice_roll;
+				$damage = rand(1,10) + $t10_dice_roll + $this->strength;
 
 				// $object_weapons = $this->weapons;
 				// $object_armors = $opponent->armors;
@@ -60,7 +62,7 @@ class Character extends Base
 			else
 			{
 				// normal hit
-				$damage = rand(1,10);
+				$damage = rand(1,10) + $this->strength;
 				//$damage = rand(1,10) + $object_weapons[0] - $object_armors[0];
 				// $object_weapons = $this->weapons;
 				// $object_armors = $opponent->armors;

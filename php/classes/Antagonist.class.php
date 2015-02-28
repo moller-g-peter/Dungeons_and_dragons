@@ -2,16 +2,18 @@
 
 class Antagonist extends character {
 
-	// protected $name;
-	// protected $health = 100;
-	// protected $strength = 1;
-	// protected $critical_hit;
+	public $name;
+	public $health = 0;
+	
 
-	// public function __construct($name, $stats) 
-	// {
-	// 	$this->name = $name;
-	// 	$this->health = $stats["Health"];
-	// 	$this->strength = $stats["Strength"];
-	// }
+	public function __construct($name)
+	{
+		$this->name = $name;
+	}
 
 }
+		//--------------------------------------------------------------
+		//DESSA KAN VARA ANVÄNDBARA I FRAMTIDEN!!!!
+		// $this->health = $stats["Health"];
+		// $this->strength = $stats["Strength"];
+		//--------------------------------------------------------------
