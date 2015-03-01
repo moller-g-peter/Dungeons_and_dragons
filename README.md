@@ -25,14 +25,18 @@ Operating instructions:
 Changelog:
 ---------
 
-* Cpu-player function is not ativated thus only one player 
+* Cpu-player function is not activated thus only one player 
 	is available during combat.
+
+* Code for randomization of cpu-characters name exists but not activated 
 
 * 'Challenges' as mentioned in Thomas' and Hugo's syntax is 
 	here named as 'Antagonists' (Challenges = Antagonists).
 
 * 'Tools' mentioned in Thomas' and Hugo's syntax is 
 	here named as 'Items' (Tools = Items).
+
+* No items are available at the moment.
 
 
 
@@ -52,6 +56,7 @@ Copyright and licensing information:
 -----------------------------------
 
 Library: nodebite-swiss-army-oop.php (license of Nodebite AB).
+
 
 
 

@@ -1,12 +1,12 @@
-<?php
+// <?php
 
-class Knight extends Character {
+// class Knight extends Character {
 	
-	public $name;
-	public $level = 50;
-	public $health = 100;
-	public $strength = 5;
-	public $dexterity = 2;
-	public $intelligence = 4;
+// 	public $name;
+// 	public $level = 50;
+// 	public $health = 100;
+// 	public $strength = 5;
+// 	public $dexterity = 2;
+// 	public $intelligence = 4;
 	
-}
+// }

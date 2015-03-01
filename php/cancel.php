@@ -24,13 +24,10 @@ $data_base = new DBObjectSaver(array(
   for this if statement to become true
 */
 if (isset($_REQUEST["reset"])) {
-  //unset monsters, heroes and story from $ds
   unset($data_base->antagonists);
   unset($data_base->protagonists);
   unset($data_base->story);
 }
 
-//echo something out so that AJAX still thinks
-//it recieves valid JSON as a response
-//not echoing anything produces an AJAX error
+
 echo(json_encode(true));

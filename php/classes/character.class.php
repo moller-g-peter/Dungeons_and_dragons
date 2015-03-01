@@ -16,11 +16,48 @@ class Character extends Base
 	
 
 
-	public function __construct($name)
+	public function __construct($name, $characterClass)
 	{
 		$this->name = $name;
+
+		$this->setCharacterClassStats($characterClass);
 	}
 
+
+	public function setCharacterClassStats($characterClass)
+	{
+		
+		if ($characterClass == "Knight"){
+		/*var_dump($characterClass);
+		die();*/
+
+			$this->level == 50;
+			$this->health == 100;
+			$this->strength == 5;
+			$this->dexterity == 2;
+			$this->intelligence == 4;
+
+			echo($this->health);
+		}
+		else if ($characterClass == "Archer")
+		{
+			
+			$this->level == 50;
+			$this->health == 80;
+			$this->strength == 2;
+			$this->dexterity == 5;
+			$this->intelligence == 5;
+		}
+		else if ($characterClass == "Sorcerer")
+		{
+			
+			$this->level == 50;
+			$this->health == 110;
+			$this->strength == 1;
+			$this->dexterity == 3;
+			$this->intelligence == 10;
+		}
+	}
 
 
 //--------------------------------------------------------------

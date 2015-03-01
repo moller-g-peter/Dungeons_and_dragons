@@ -38,7 +38,6 @@ $(function() {
             $(".inputField").hide();
             $(".buttons").show();
             $(".characters").hide();
-            
           }
         }
 

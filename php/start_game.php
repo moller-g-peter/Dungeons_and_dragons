@@ -20,33 +20,42 @@ $object_cpu_protagonists = &$data_base->cpu_protagonists;
 $object_antagonists = &$data_base->antagonists;
 $object_items = &$data_base->items;
 
-if (isset($_REQUEST["playerName"]) && isset($_REQUEST["playerClass"])) {
+if (isset($_REQUEST["playerName"]) && isset($_REQUEST["playerClass"]))
+{
   // it might be easier to store our data in different variables
+  // var_dump($_REQUEST);
+  // $_REQUEST["playerName"];
+  // $_REQUEST["playerClass"];
 
-  $create_player = $_REQUEST["playerName"];
-  $create_class = $_REQUEST["playerClass"];
+  $chosen_protagonist = new Character ($_REQUEST["playerName"], $_REQUEST["playerClass"]);
 
-  $new_player = New $create_class($create_player);
-  $object_protagonists[] = &$new_player;
-} else {
+  $object_protagonists[] = &$chosen_protagonist;
+} 
+else 
+{
   echo(json_encode(false));
   die();
 }
 
 //--------------------------------------------------------------
 
-  $object_king_arthur = New Knight("King Arthur");
-  $object_legolas = New Archer("Legolas");
-  $object_merlin = New Sorcerer("Merlin");
+  // $object_king_arthur = New Knight("");
+  // $object_legolas = New Archer("");
+  // $object_merlin = New Sorcerer("");
 
 
-  // $object_protagonists = array();
-  // $object_protagonists[] = New Protagonists(
-  //   "Protagonists",
-  //   $object_king_arthur,
-  //   $object_legolas,
-  //   $object_merlin
-  // );
+  $protagonists = array(
+    array("name" => "Arthur", "class" => "Knight"),
+    array("name" => "Legolas", "class" => "Archer"),
+    array("name" => "Merlin", "class" => "Sorcerer")
+  );
+
+  $randomize_protagonists = mt_rand(0, count($protagonists) -1);
+
+  $temporary_protagonist = new Character ($protagonists[$randomize_protagonists]["name"], $protagonists[$randomize_protagonists]["class"]);
+
+  unset($protagonists[$randomize_protagonists]);
+  $protagonists = array_values($protagonists);
 
   //--------------------------------------------------------------
 
