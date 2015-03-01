@@ -59,7 +59,7 @@ $(function() {
         console.log("Fight is successful: ", data);
         $(".resultWindow").append("<p>" + data + "</p>");
 
-        window.scrollTo(0, 5000);
+        window.scrollTo(0, 50000);
       },
       error: function(data) {
         console.log("Fight not successful ", data.responseText);
@@ -67,26 +67,19 @@ $(function() {
     });
   });
 
-  $(".magic").click(function(){
 
-  });
-
-  $(".items").click(function(){
-    $.ajax({
-      url:"php/use_items.php",
-      dataType: "json",
-      success: function(data) {
-        console.log("item is successful: ", data);
-      },
-      error: function(data) {
-        console.log("item not successful ", data.responseText);
-      }
-    });
-  });
-
-  $(".cancel").click(function(){
-
-  });
+  // $(".items").click(function(){
+  //   $.ajax({
+  //     url:"php/use_items.php",
+  //     dataType: "json",
+  //     success: function(data) {
+  //       console.log("item is successful: ", data);
+  //     },
+  //     error: function(data) {
+  //       console.log("item not successful ", data.responseText);
+  //     }
+  //   });
+  // });
 
 
   $(".cancel").click(function() {
@@ -100,8 +93,7 @@ $(function() {
       },
       success: function(data) {
         console.log("cancel fight");
-        $(".printFight").html("");
-        $(".printOptions").html("");
+   
       },
       error: function(data) {
         console.log("OMG I FAILED TO RESET! ", data.responseText);

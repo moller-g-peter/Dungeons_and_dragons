@@ -53,30 +53,32 @@ if (isset($_REQUEST["playerName"]) && isset($_REQUEST["playerClass"])) {
   $object_items = array();
 
   // i mitt fall så är public "$skills;" i "Item class" = Heal, Strength, Attack, Protection
-  $object_items[] = New Items("Potions", array("Heal" => 10));
+  $object_items[] = New Items("Potions", array("Heal" => 20));
   $object_items[] = New Items("Herb", array("Heal" => 10));
-  $object_items[] = New Items("Beer", array("Strength" => 10, "Drunk" => 10));
-  $object_items[] = New Items("Sword", array("Attack" => 10));
-  $object_items[] = New Items("Bow", array("Attack" => 10));
-  $object_items[] = New Items("Staff", array("Attack" => 10, "Magic" => 10));
-  $object_items[] = New Items("Armor", array("Protection" => 10));
-  $object_items[] = New Items("Shield", array("Protection" => 10));
-  $object_items[] = New Items("Robe", array("Protection" => 10, "Magic protection" => 10));
+  $object_items[] = New Items("Beer", array("Strength" => 15, "Dexterity" => 10));
+
+  $object_items[] = New Items("Sword", array("Attack" => 20));
+  $object_items[] = New Items("Bow", array("Attack" => 15));
+  $object_items[] = New Items("Staff", array("Attack" => 10, "Magic" => 30));
+
+  $object_items[] = New Items("Armor", array("Protection" => 20));
+  $object_items[] = New Items("Shield", array("Protection" => 15));
+  $object_items[] = New Items("Robe", array("Protection" => 10, "Magic protection" => 15));
 
   //--------------------------------------------------------------
 
   $object_antagonists = array();
 
-  $object_antagonists[] = New Antagonist("Necro Mancer", array("Health" => 1000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("South Dragon", array("Health" => 1500,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("North Dragon", array("Health" => 2000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Dark Knight", array("Health" => 2500,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Owl Eye", array("Health" => 3000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Vampir", array("Health" => 3500,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Skeleton", array("Health" => 4000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Manticor", array("Health" => 4500,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Ghoul", array("Health" => 5000,"Strength" => 10));
-  $object_antagonists[] = New Antagonist("Magician", array("Health" => 5500,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("Necro Mancer", array("Health" => 90,"Strength" => 1));
+  $object_antagonists[] = New Antagonist("South Dragon", array("Health" => 100,"Strength" => 10));
+  $object_antagonists[] = New Antagonist("North Dragon", array("Health" => 150,"Strength" => 11));
+  $object_antagonists[] = New Antagonist("Dark Knight", array("Health" => 120,"Strength" => 9));
+  $object_antagonists[] = New Antagonist("Owl Eye", array("Health" => 90,"Strength" => 3));
+  $object_antagonists[] = New Antagonist("Vampir", array("Health" => 80,"Strength" => 8));
+  $object_antagonists[] = New Antagonist("Skeleton", array("Health" => 35,"Strength" => 5));
+  $object_antagonists[] = New Antagonist("Manticor", array("Health" => 40,"Strength" => 7));
+  $object_antagonists[] = New Antagonist("Ghoul", array("Health" => 55,"Strength" => 4));
+  $object_antagonists[] = New Antagonist("Magician", array("Health" => 77,"Strength" => 2));
 
   //--------------------------------------------------------------
 

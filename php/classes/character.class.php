@@ -21,6 +21,8 @@ class Character extends Base
 		$this->name = $name;
 	}
 
+
+
 //--------------------------------------------------------------
 // if-sats för hit metoder
 
@@ -93,6 +95,7 @@ class Character extends Base
 		else
 		{
 			return $this->name. " is dead!<br>";
+			
 		}
 	}
 
