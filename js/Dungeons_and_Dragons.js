@@ -34,7 +34,7 @@ $(function() {
         for (var i = 0; i < data.length; i++) {
           for (var j = 0; j < data[i].length; j++) {
             console.log("start_game is successful: ", data);
-            $(".resultWindow").append("<p>" + data[i][j].name + "</p>");
+            $(".resultWindow").append("<h2>" + "You have chosen " + "<strong>" + data[i][j].name + "</strong>" + " to fight for you." +  "</h2>");
             $(".inputField").hide();
             $(".buttons").show();
             $(".characters").hide();
@@ -81,7 +81,7 @@ $(function() {
   // });
 
 
-  $(".cancel").click(function() {
+  $(".reset").click(function() {
     $.ajax({
       //requests fight.php file
       url:"php/cancel.php",

@@ -12,9 +12,16 @@ body {
 	position: fixed;
 }
 
-.attack, .magic, .items, .cancel {
+.attack {
 	display: block;
 	margin: 5px;
+	border: 5px solid blue;
+}
+
+.reset {
+	display: block;
+	margin: 5px;
+	border: 5px solid red;
 }
 
 .inputField {
